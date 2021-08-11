@@ -59,3 +59,6 @@
     background-color: #fff;
     color: #b1b1b1;
 }
+.slide button:hover {
+    color: #66cc54;
+}
