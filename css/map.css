@@ -22,3 +22,13 @@
     line-height: normal;
     letter-spacing: normal;
 }
+
+.Bottombar {
+    filter: drop-shadow(3px 3px 20px rgba(157, 157, 157, 0.161));
+    position: absolute;
+    overflow: visible;
+    width: 408px;
+    height: 129px;
+    left: 40px;
+    top: 819px;
+}
