@@ -21,3 +21,10 @@
     text-align: left;
     color: #717171;
 }
+
+.search div {
+    width: 24.2px;
+    height: 23.7px;
+    margin: 0 13.8px 0 0;
+    background-color: #717171;
+}
