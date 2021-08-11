@@ -8,7 +8,7 @@
     height: 53px;
     padding: 20px;
     border-radius: 31px;
-    box-shadow: 5px 5px 20px 0 rgba(105, 105, 105, 0.16);
+    box-shadow: 5px 5px 20px 0 rgb(105, 105, 105);
     font-family: GmarketSansTTF, FontAwesome;
     font-style: normal;
     text-decoration: inherit;
