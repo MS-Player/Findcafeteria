@@ -1,0 +1,23 @@
+.search {
+    width: 387px;
+    height: 53px;
+    text-align: center;
+    margin: 0 20px 8px 0;
+    padding: 14.7px 73px 14.7px 20px;
+    border-radius: 31px;
+    box-shadow: 5px 5px 20px 0 rgba(105, 105, 105, 0.16);
+    background-color: #fff;
+}
+.search span {
+    margin: 3.3px 0 3.3px 13.8px;
+    opacity: 0.46;
+    font-family: GmarketSansTTF;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #717171;
+}
