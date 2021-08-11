@@ -4,6 +4,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
         <link rel="stylesheet" href="css/map.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
 
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e58d2ef781fe0fa2dc40f1e1548213b5"></script>
         <style>
@@ -13,14 +14,12 @@
         </style>
     </head>
     <body>
-        <div style="position: absolute;">
-            <!-- 지도를 표시할 div 입니다 -->
-            <div id="map" style="height: 100%; width: 100%;"></div>
-            <div class="search">
-                <div class="Icon-ionic-ios-search"></div>
-                <span>지역, 건물명, 도로명을 검색하세요.</span>
-            </div>
+        <div class="search" style="position: absolute; z-index: 2;">
+           <div class="Icon-ionic-ios-search"></div>
+           <span>지역, 건물명, 도로명을 검색하세요.</span>
         </div>
+        <!-- 지도를 표시할 div 입니다 -->
+        <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
     </body>
     <script type="text/javascript" src="js/map.js"></script>
 </html>
