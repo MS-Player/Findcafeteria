@@ -26,8 +26,8 @@
 .Bottombar {
     width: 348px;
     height: 69px;
-    bottom:0px; 
-    padding: 20.1px 53px 0 22.1px;
+    bottom: 38px;
+    padding: 40px;
     border-radius: 35px;
     box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
     background-color: #fff;
