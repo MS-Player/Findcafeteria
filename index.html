@@ -16,10 +16,10 @@
     <body>
         <p><input type="text" class="search" style="position: absolute; z-index: 2;" placeholder="&#xF002; 지역, 건물명, 도로명을 검색하세요." /></p>
 
-        <div class="Bottombar" style="position:fixed; z-index: 3;">
-            <img src="icons/map_grey.svg" alt="map">
-            <img src="icons/list_grey.svg" alt="list">
-            <img src="icons/settings_grey.svg" alt="setting">
+        <div class="Bottombar" style="position:fixed; z-index: 3; display: flex;">
+            <img src="icons/map_grey.svg" alt="map" style="flex: 1;">
+            <img src="icons/list_grey.svg" alt="list" style="flex: 1;">
+            <img src="icons/settings_grey.svg" alt="setting" style="flex: 1;">
         </div>
         <!-- 지도를 표시할 div 입니다 -->
         <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
