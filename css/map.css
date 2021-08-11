@@ -27,8 +27,8 @@
     width: 348px;
     height: 69px;
     margin: 423px 40px 0 19px;
-    padding: 20.1px 53px 5px;
+    padding: 20.1px 53px 0 22.1px;
     border-radius: 35px;
-    box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.16);
+    box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
     background-color: #fff;
 }
