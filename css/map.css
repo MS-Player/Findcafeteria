@@ -37,6 +37,9 @@
     width: 407px;
     height: 34px;
     margin: 8px 0 11.8px;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: center;
 }
 
 .slide button {
