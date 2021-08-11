@@ -1,3 +1,8 @@
+@font-face {
+    src : url("../font/GmarketSansTTF/GmarketSansTTFMedium.ttf"); 
+    font-family: GmarketSansTTF
+}
+
 .search {
     width: 387px;
     height: 53px;
