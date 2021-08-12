@@ -77,9 +77,9 @@
     height: 60px;
     border-radius: 75px;
     right: 20px;
-    padding: 11px;
     margin: 180px 0 0;
     box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
     background-color: #fff;
     border: 3px solid #ffffff;
+    cursor: pointer;
   }
