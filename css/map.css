@@ -60,6 +60,7 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.18px;
+    border: 5px solid #ffffff;
     border-radius: 17px;
     text-align: left;
     box-shadow: 3px 3px 20px 0 rgba(60, 60, 60, 0.16);
