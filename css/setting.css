@@ -64,10 +64,8 @@ body {
 }
 
 .setting_txt {
-    margin: 47px 302px 15px 4px;
     font-family: GmarketSansTTF;
     font-size: 22px;
-    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.45;
