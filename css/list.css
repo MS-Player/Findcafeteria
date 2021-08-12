@@ -1,0 +1,79 @@
+@font-face {
+    src : url("../font/GmarketSansTTF/GmarketSansTTFMedium.ttf"); 
+    font-family: GmarketSansTTF
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    padding: 61px 40px 39px;
+}
+
+.search {
+    width: 387px;
+    height: 53px;
+    padding: 20px;
+    border-radius: 31px;
+    border: 3px solid #ffffff;
+    box-shadow: 5px 5px 20px 0 rgba(105, 105, 105, 0.5);
+    font-family: GmarketSansTTF, FontAwesome;
+    font-style: normal;
+    text-decoration: inherit;
+    background-color: #ffffff;
+    color: #717171;
+    text-align: left;
+    margin: 30px 20px 8px;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.Bottombar {
+    width: 350px;
+    bottom: 30px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
+    background-color: #fff;
+}
+.Bottombar button {
+    border:0px;
+    background: none;
+    padding: 0 -100px;
+    cursor: pointer;
+}
+.Bottombar button:hover {
+    filter: invert(69%) sepia(81%) saturate(500%) hue-rotate(60deg) brightness(50%) contrast(92%);
+}
+
+.your_locate {
+    margin: 40px 53px 30px 5px;
+    font-family: GmarketSansTTF;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #717171;
+  }
+  .cafeteria_list {
+    margin: 40px 53px 30px 5px;
+    font-family: GmarketSansTTF;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #66cc54;
+  }
