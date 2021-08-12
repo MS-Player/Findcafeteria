@@ -89,7 +89,7 @@
 
 .zoom {
     width: 40px;
-    height: 125px;
+    height: 100px;
     right: 20px;
     margin: 250px 0 0;
     padding: 20.7px 11.4px 32.6px 11.3px;
@@ -110,6 +110,7 @@
     margin: 20.6px 0 25.6px;
     opacity: 0.27;
     background-color: #707070;
+    cursor: pointer;
 }
 
 .zoom_button {
