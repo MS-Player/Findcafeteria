@@ -110,10 +110,10 @@
     margin: 20.6px 0 25.6px;
     opacity: 0.27;
     background-color: #707070;
-    cursor: pointer;
 }
 
 .zoom_button {
     background-color: #ffffff;
     border:0px;
+    cursor: pointer;
 }
