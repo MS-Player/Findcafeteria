@@ -103,17 +103,11 @@
     height: 24.5px;
     margin: 0 6.9px 20.6px 6.9px;
 }
-  
-.plus_l {
-    width: 0;
-    height: 24.5px;
-    border: solid 3px #535353;
-}
 
-.plus_- {
-    width: 24.5px;
-    height: 0;
-    margin: 12.3px 0 0;
-    border: solid 3px #535353;
+.zoombar {
+    width: 38.3px;
+    height: 1px;
+    margin: 20.6px 0 25.6px;
+    opacity: 0.27;
+    background-color: #707070;
 }
-  
