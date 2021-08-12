@@ -85,4 +85,34 @@
     border: 3px solid #ffffff;
     cursor: pointer;
     justify-content: center;
-  }
+}
+
+.zoom {
+    width: 61px;
+    height: 125px;
+    margin: 31px 20px 144px 117.2px;
+    padding: 20.7px 11.4px 32.6px 11.3px;
+    border-radius: 34px;
+    box-shadow: 5px 5px 20px 0 rgba(123, 123, 123, 0.16);
+    background-color: #fff;
+}
+
+.plus_icon {
+    width: 24.5px;
+    height: 24.5px;
+    margin: 0 6.9px 20.6px 6.9px;
+}
+  
+.plus_l {
+    width: 0;
+    height: 24.5px;
+    border: solid 3px #535353;
+}
+
+.plus_- {
+    width: 24.5px;
+    height: 0;
+    margin: 12.3px 0 0;
+    border: solid 3px #535353;
+}
+  
