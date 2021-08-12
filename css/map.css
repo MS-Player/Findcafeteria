@@ -104,10 +104,15 @@
     margin: 0 6.9px 20.6px 6.9px;
 }
 
-.zoombar {
+.zoom_bar {
     width: 38.3px;
     height: 1px;
     margin: 20.6px 0 25.6px;
     opacity: 0.27;
     background-color: #707070;
+}
+
+.zoom_button {
+    background-color: #ffffff;
+    border:0px;
 }
