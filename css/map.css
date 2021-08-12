@@ -71,3 +71,12 @@
 .slide button:hover {
     color: #66cc54;
 }
+
+.compass {
+    width: 61px;
+    height: 60px;
+    margin: 54px 20px 31px 117.2px;
+    padding: 11px 11.5px 11px 11.5px;
+    box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
+    background-color: #fff;
+  }
