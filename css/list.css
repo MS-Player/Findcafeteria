@@ -64,7 +64,7 @@ body {
     letter-spacing: normal;
     text-align: left;
     color: #717171;
-  }
+}
   .cafeteria_list {
     margin: 40px 53px 30px 5px;
     font-family: GmarketSansTTF;
@@ -76,4 +76,115 @@ body {
     letter-spacing: normal;
     text-align: left;
     color: #66cc54;
-  }
+}
+
+.cafeteria_list_box {
+    width: 348px;
+    height: 252px;
+    margin: 30px 0 31px;
+    padding: 23px 26px 23px 18px;
+    border-radius: 22px;
+    background-color: #fff;
+}
+
+.cafeteria_name {
+    width: 219px;
+    height: 28px;
+    margin: 0 31px 8px 0;
+    font-family: GmarketSansTTF;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.cafeteria_address {
+    width: 191px;
+    height: 12px;
+    margin: 8px 59px 20px 0;
+    opacity: 0.77;
+    font-family: GmarketSansTTF;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-align: left;
+    color: #555;
+}
+
+.topic_txt {
+    width: 58px;
+    height: 15px;
+    margin: 20px 192px 8px 0;
+    font-family: GmarketSansTTF;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.15px;
+    text-align: left;
+    color: #555;
+}
+
+.target_person {
+    width: 285px;
+    height: 24px;
+    margin: 8px 19px 20px 0;
+    font-family: GmarketSansTTF;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.time {
+    width: 174px;
+    height: 26px;
+    margin: 6px 76px 7px 0;
+    font-family: GmarketSansTTF;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.26px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.day_of_the_week {
+    width: 109px;
+    height: 14px;
+    margin: 7px 141px 3px 0;
+    opacity: 0.53;
+    font-family: GmarketSansTTF;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-align: left;
+    color: #555;
+}
+
+.call {
+    width: 54px;
+    height: 54px;
+    margin: 2px 0 0 31px;
+    padding: 13.3px 13.8px 14px 13.8px;
+    border-radius: 14px;
+    background-color: #66cc54;
+    border: 0px solid;
+}
