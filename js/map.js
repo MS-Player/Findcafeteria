@@ -16,9 +16,9 @@ if (navigator.geolocation) {
             lon = position.coords.longitude; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-          message = 'geolocation을 사용할수 없어요..'
+
         // 마커와 인포윈도우를 표시합니다
-        displayMarker(locPosition, message);
+        displayMarker(locPosition);
             
       });
     
