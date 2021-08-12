@@ -119,7 +119,6 @@ body {
 }
 
 .Bottombar {
-    display: flex;
     width: 350px;
     bottom: 30px;
     justify-content: center;
@@ -133,4 +132,7 @@ body {
     background: none;
     padding: 0 -100px;
     cursor: pointer;
+}
+.Bottombar button:hover {
+    filter: invert(69%) sepia(81%) saturate(500%) hue-rotate(60deg) brightness(50%) contrast(92%);
 }

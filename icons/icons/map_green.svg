@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.804" height="27.715" viewBox="0 0 29.804 27.715">
+  <g id="map_green" transform="translate(0 -1.5)">
+    <path id="패스_6" data-name="패스 6" d="M1.5,7.943V27.715l8.529-4.943,9.747,4.943L28.3,22.772V3L19.775,7.943,10.029,3Z" fill="none" stroke="#66cc54" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="패스_7" data-name="패스 7" d="M12,3V22.772" transform="translate(-1.971)" fill="none" stroke="#66cc54" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="패스_8" data-name="패스 8" d="M24,9V28.772" transform="translate(-4.225 -1.057)" fill="none" stroke="#66cc54" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+.svg_button {
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(13deg) brightness(95%) contrast(105%);
+}
+
+.svg_button:hover {
+    filter: invert(69%) sepia(81%) saturate(342%) hue-rotate(60deg) brightness(87%) contrast(92%);
+}
