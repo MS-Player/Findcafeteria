@@ -8,6 +8,8 @@ body {
 }
 
 .background {
+    display: flex;
+    justify-content: center;
     padding: 61px 40px 39px;
 }
 
@@ -74,7 +76,7 @@ body {
 
 .setting_menu {
     width: 344px;
-    height: 134px;
+    height: 140px;
     margin: 15px 2px 318px;
     padding: 25px 20.8px 25px 23px;
     border-radius: 29px;
