@@ -3,10 +3,6 @@
     font-family: GmarketSansTTF
 }
 
-body {
-    overflow-y:hidden;
-}
-
 .search {
     width: 387px;
     height: 53px;
