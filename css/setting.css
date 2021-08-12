@@ -130,4 +130,20 @@ body {
     letter-spacing: normal;
     text-align: left;
     color: #717171;
-  }
+}
+
+.Bottombar {
+    width: 350px;
+    bottom: 30px;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
+    background-color: #fff;
+}
+.Bottombar button {
+    border:0px;
+    background: none;
+    padding: 0 -100px;
+    cursor: pointer;
+}
