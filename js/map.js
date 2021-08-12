@@ -6,6 +6,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+function Posit() {
 // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
 if (navigator.geolocation) {
     
@@ -29,6 +30,7 @@ if (navigator.geolocation) {
         message = '위치를 정확히 불러올수 없어요 ...ㅠㅠㅠ'
         
     displayMarker(locPosition, message);
+    }
 }
 
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
