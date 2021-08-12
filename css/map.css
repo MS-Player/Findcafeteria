@@ -76,6 +76,7 @@
     width: 61px;
     height: 60px;
     border-radius: 75px;
+    display: block;
     float: right;
     padding: 11px;
     box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
