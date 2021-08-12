@@ -3,11 +3,12 @@
     font-family: GmarketSansTTF
 }
 
-.background {
-    width: 100%;
-    height: 100%;
-    padding: 61px 40px 39px;
+body {
     background-color: #fafafa;
+}
+
+.background {
+    padding: 61px 40px 39px;
 }
 
 .FindCafeteria {
