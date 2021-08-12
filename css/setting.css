@@ -12,8 +12,6 @@ body {
 }
 
 .FindCafeteria {
-    width: 302px;
-    height: 37px;
     margin: 0 46px 11px 0;
     font-family: GmarketSansTTF;
     font-size: 37px;
@@ -27,8 +25,6 @@ body {
 }
 
 .Made-by-MS_Player {
-    width: 160px;
-    height: 17px;
     margin: 11px 188px 26px 0;
     font-family: GmarketSansTTF;
     font-size: 15px;
@@ -42,8 +38,6 @@ body {
   }
 
 .Map-API-Kakao-Map-Cafeteria-API-api-data {
-    width: 228px;
-    height: 56px;
     margin: 26px 120px 26px 0;
     font-family: GmarketSansTTF;
     font-size: 18px;
@@ -57,8 +51,6 @@ body {
 }
 
 .Hackalearn-2021 {
-    width: 238px;
-    height: 48px;
     margin: 26px 110px 47px 0;
     font-family: GmarketSansTTF;
     font-size: 16px;
@@ -72,8 +64,6 @@ body {
 }
 
 .setting_txt {
-    width: 42px;
-    height: 22px;
     margin: 47px 302px 15px 4px;
     font-family: GmarketSansTTF;
     font-size: 22px;
