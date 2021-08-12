@@ -44,14 +44,14 @@
 
         <div class="zoom" style="position: absolute; z-index: 2;">
             <center>
-                <button class="zoom_button">
-                    <img src="icons/Icon feather-plus.svg" alt="plus">
+                <button class="zoom_button" onclick="zoomIn()">
+                    <img src="icons/Icon feather-plus.svg" alt="In">
                 </button>
             </center>
             <center><div class="zoom_bar"></div></center>
             <center>
-                <button class="zoom_button" style="height: 25px;">
-                    <img src="icons/Icon feather-minus.svg" alt="plus">
+                <button class="zoom_button" style="height: 25px;" onclick="zoomOut()">
+                    <img src="icons/Icon feather-minus.svg" alt="Out">
                 </button>
             </center>
         </div>
@@ -61,5 +61,4 @@
         <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
     </body>
     <script type="text/javascript" src="js/map.js"></script>
-    <script type="text/javascript" src="js/map_button.js"></script>
 </html>
