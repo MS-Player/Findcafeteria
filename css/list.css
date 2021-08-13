@@ -54,7 +54,7 @@ body {
 }
 
 .your_locate {
-    margin: 40px 53px 30px 5px;
+    margin: 20px 5px 15px;
     font-family: GmarketSansTTF;
     font-size: 34px;
     font-weight: bold;
@@ -66,7 +66,7 @@ body {
     color: #717171;
 }
 .cafeteria_list {
-    margin: 40px 53px 30px 5px;
+    margin: 20px 5px 15px;
     font-family: GmarketSansTTF;
     font-size: 34px;
     font-weight: bold;
@@ -79,17 +79,14 @@ body {
 }
 
 .cafeteria_list_box {
-    width: 350px;
-    margin: 30px 0 31px;
+    margin: 15px 2px;
     padding: 23px 26px 23px 18px;
     border-radius: 22px;
     background-color: #fff;
 }
 
 .cafeteria_name {
-    width: 219px;
-    height: 28px;
-    margin: 0 31px 8px 0;
+    margin: 0 0 8px 0;
     font-family: GmarketSansTTF;
     font-size: 28px;
     font-weight: bold;
@@ -102,12 +99,10 @@ body {
 }
 
 .cafeteria_address {
-    width: 191px;
-    height: 12px;
-    margin: 8px 59px 20px 0;
+    margin: 8px 0 20px 0;
     opacity: 0.77;
     font-family: GmarketSansTTF;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -118,9 +113,7 @@ body {
 }
 
 .topic_txt {
-    width: 58px;
-    height: 15px;
-    margin: 20px 192px 8px 0;
+    margin: 20px 0 8px 0;
     font-family: GmarketSansTTF;
     font-size: 15px;
     font-weight: bold;
@@ -133,9 +126,7 @@ body {
 }
 
 .target_person {
-    width: 285px;
-    height: 24px;
-    margin: 8px 19px 20px 0;
+    margin: 8px 0 20px 0;
     font-family: GmarketSansTTF;
     font-size: 24px;
     font-weight: bold;
@@ -148,9 +139,7 @@ body {
 }
 
 .time {
-    width: 174px;
-    height: 26px;
-    margin: 6px 76px 7px 0;
+    margin: 6px 0 7px 0;
     font-family: GmarketSansTTF;
     font-size: 26px;
     font-weight: bold;
@@ -163,9 +152,7 @@ body {
 }
 
 .day_of_the_week {
-    width: 109px;
-    height: 14px;
-    margin: 7px 141px 3px 0;
+    margin: 7px 0 3px 0;
     opacity: 0.53;
     font-family: GmarketSansTTF;
     font-size: 14px;
@@ -181,8 +168,8 @@ body {
 .call {
     width: 54px;
     height: 54px;
-    margin: 2px 0 0 31px;
-    padding: 13.3px 13.8px 14px 13.8px;
+    margin: 0 0 0 50px;
+    padding: 14px;
     border-radius: 14px;
     background-color: #66cc54;
     border: 0px solid;
