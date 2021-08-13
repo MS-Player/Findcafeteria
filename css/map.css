@@ -95,12 +95,7 @@
 }
 
 .compassicon {
-    filter: invert(63%) sepia(1%) saturate(4986%) hue-rotate(39deg) brightness(98%) contrast(76%);
     padding: 3.2px;
-}
-.compassicon:hover {
-    filter: none;
-    filter: invert(98%) sepia(11%) saturate(4538%) hue-rotate(44deg) brightness(98%) contrast(63%);
 }
 
 
