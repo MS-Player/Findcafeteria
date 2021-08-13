@@ -94,13 +94,17 @@
     justify-content: center;
 }
 
-#grey_compass > #green_compass {
-    opacity: 0;
-    transition: opacity 1s;
+.compassicon {
+    padding: 3.2px;
 }
 
-#grey_compass:hover > #green_compass {
-    opacity: 1;
+.compassicon img {
+	display:inline-block;
+    background:url('icons/compass_grey.svg') no-repeat;
+}
+
+.compassicon img:hover{
+    background:url('icons/compass_green.svg') no-repeat;
 }
 
 
