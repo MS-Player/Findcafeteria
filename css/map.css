@@ -32,6 +32,7 @@ body {
 .Bottombar {
     width: 350px;
     bottom: 30px;
+    display: flex;
     justify-content: center;
     padding: 20px;
     border-radius: 35px;
