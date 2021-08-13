@@ -66,7 +66,8 @@
     border: 3px solid #ffffff;
     border-radius: 17px;
     text-align: left;
-    box-shadow: 3px 3px 20px 0 rgba(60, 60, 60, 0.16);
+    box-shadow: 0 9px #999;
+    /*box-shadow: 3px 3px 20px 0 rgba(60, 60, 60, 0.16);*/
     background-color: #fff;
     color: #b1b1b1;
 }
@@ -74,7 +75,10 @@
     color: #66cc54;
 }
 .slide button:active {
-    background-color: #9c9c9c;
+    color: #fff;
+    background-color: #66cc54;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .compass {
