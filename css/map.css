@@ -109,7 +109,8 @@
     box-shadow: 5px 5px 20px 0 rgba(123, 123, 123, 0.16);
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .plus_icon {
