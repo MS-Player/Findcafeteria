@@ -98,12 +98,12 @@
     padding: 3.2px;
 }
 
-.compassicon img {
+.compassicon {
 	display:inline-block;
     background:url('icons/compass_grey.svg') no-repeat;
 }
 
-.compassicon img:hover{
+.compassicon:hover{
     background:url('icons/compass_green.svg') no-repeat;
 }
 
