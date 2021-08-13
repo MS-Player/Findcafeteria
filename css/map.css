@@ -32,7 +32,7 @@ body {
 .Bottombar {
     width: 350px;
     bottom: 30px;
-    margin: 0 20px 0;
+    margin: 0 auto 0;
     padding: 20px;
     border-radius: 35px;
     box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
