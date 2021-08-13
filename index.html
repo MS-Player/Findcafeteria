@@ -12,10 +12,30 @@
     <body>
         <p><input type="text" class="search" style="position: absolute; z-index: 2;" placeholder="&#xF002; 지역, 건물명, 도로명을 검색하세요." /></p>
 
-        <div class="Bottombar" style="position:fixed; z-index: 2; display: flex;">
-            <center style="flex: 1;"><img src="icons/map_green.svg" alt="map"></center>
-            <center style="flex: 1;"><button onClick="location.href='list.html'"><img src="icons/list_grey.svg" alt="list"></button></center>
-            <center style="flex: 1;"><button onClick="location.href='setting.html'"><img src="icons/settings_grey.svg" alt="setting"></button></center>
+        <div style="position:fixed; z-index: 2; display: flex;">
+            <div class="cafeteria_list_box" style="display: block;">
+                <span class="cafeteria_name">아현노인복지센터</span><br>
+                <span class="cafeteria_address">서울특별시 마포구 마포대로26길 19</span><br><br>
+                <span class="topic_txt">지급대상</span><br>
+                <span class="target_person">수급자, 차상위, 기타저소득</span><br><br>
+                <span class="topic_txt">영업시간</span><br>
+                <div style="display: flex;">
+                    <div>
+                        <span class="time">11:30 ~ 12:30</span><br>
+                        <span class="day_of_the_week">(월, 화, 수, 목, 금)</span>
+                    </div>
+                    <a class="call" href='tel:010-0000-0000'>
+                        <div style="display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="Bottombar" style="position:fixed; z-index: 2; display: flex;">
+                <center style="flex: 1;"><img src="icons/map_green.svg" alt="map"></center>
+                <center style="flex: 1;"><button onClick="location.href='list.html'"><img src="icons/list_grey.svg" alt="list"></button></center>
+                <center style="flex: 1;"><button onClick="location.href='setting.html'"><img src="icons/settings_grey.svg" alt="setting"></button></center>
+            </div>
         </div>
 
         <div class="slide" style="position: absolute; z-index: 2;">
