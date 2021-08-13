@@ -94,6 +94,17 @@
     justify-content: center;
 }
 
+#grey_compass > #green_compass {
+    opacity: 0;
+    transition: opacity 1s;
+}
+    
+#grey_compass:hover > #green_compass {
+    opacity: 1;
+}
+
+
+
 .zoom {
     width: 40px;
     height: 100px;
