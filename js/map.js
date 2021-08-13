@@ -1,7 +1,7 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(37.5643882, 126.9653482), // 지도의 중심좌표
-        level: 8 // 지도의 확대 레벨
+        level: 3 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -60,7 +60,7 @@ function displayMarker(locPosition, message) {
 // 서울
 function Seoul() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(37.5640455, 126.834003);
+    var moveLatLon = new kakao.maps.LatLng(37.5659436, 126.9778288);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -70,7 +70,7 @@ function Seoul() {
 // 인천
 function Ich() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(37.4646656, 126.6043103);
+    var moveLatLon = new kakao.maps.LatLng(37.4560939, 126.703727);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -80,7 +80,7 @@ function Ich() {
 // 광주
 function Gju() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.1768202, 126.7737602);
+    var moveLatLon = new kakao.maps.LatLng(35.1587263, 126.8497696);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -90,7 +90,7 @@ function Gju() {
 // 울산
 function Usn() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.5621694, 129.2814602);
+    var moveLatLon = new kakao.maps.LatLng(35.5390653, 129.3103105);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -100,7 +100,7 @@ function Usn() {
 // 부산
 function Psu() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.1645702, 129.0017602);
+    var moveLatLon = new kakao.maps.LatLng(35.1793999, 129.0739666);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -110,7 +110,7 @@ function Psu() {
 // 대구
 function Dau() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.8798688, 128.4966602);
+    var moveLatLon = new kakao.maps.LatLng(35.8712121, 128.6010165);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
