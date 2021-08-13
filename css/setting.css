@@ -75,17 +75,12 @@ body {
 }
 
 .setting_menu {
-    width: 344px;
-    height: 140px;
-    margin: 15px 2px 318px;
-    padding: 25px 20.8px 25px 23px;
+    margin: 15px 2px 0;
+    padding: 25px;
     border-radius: 29px;
     background-color: #fff;
 }
 .mep_setting {
-    width: 165px;
-    height: 20px;
-    margin: 0 135.2px 22px 0;
     font-family: GmarketSansTTF;
     font-size: 20px;
     font-weight: 500;
@@ -100,15 +95,12 @@ body {
 .line {
     width: 298.4px;
     height: 0;
-    margin: 22px 0 0 1.8px;
+    margin: 25px 0;
     opacity: 0.35;
     border: solid 1.5px #707070;
 }
 
 .Github {
-    width: 165px;
-    height: 20px;
-    margin: 22px 144.2px 0 0;
     font-family: GmarketSansTTF;
     font-size: 20px;
     font-weight: 500;
