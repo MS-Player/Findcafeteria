@@ -141,9 +141,9 @@ body {
 
 
 .cafeteria_list_box {
-    margin: 15px 0;
+    margin: 0 20px 0;
     padding: 23px 26px 23px 18px;
-    bottom: 60px;
+    bottom: 100px;
     border-radius: 22px;
     background-color: #fff;
 }
