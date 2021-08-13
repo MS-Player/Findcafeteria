@@ -73,6 +73,9 @@
 .slide button:hover {
     color: #66cc54;
 }
+.slide button:active {
+    background-color: #9c9c9c;
+}
 
 .compass {
     width: 61px;
