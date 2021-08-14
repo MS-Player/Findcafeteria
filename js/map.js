@@ -36,24 +36,15 @@ function errorHandler(error) {
     }
     gps_use = false;
 }
-
-function gps_tracking(){
-    if (gps_use) {
-        map.panTo(new kakao.maps.LatLng(gps_lat,gps_lng));
-        var gps_content = '<div><img class="pulse" draggable="false" unselectable="on" src="https://ssl.pstatic.net/static/maps/m/pin_rd.png" alt=""></div>';
-        var currentOverlay = new kakao.maps.CustomOverlay({
-            position: new kakao.maps.LatLng(gps_lat,gps_lng),
-            content: gps_content,
-            map: map
-        });
-        currentOverlay.setMap(map);
-    } else {
-      alert("접근차단하신 경우 새로고침, 아닌 경우 잠시만 기다려주세요.");
-      gps_check();
-    }
-}
 // GPS END
 
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(gps_lat, gps_lng), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 // 서울
 function Seoul() {
     // 이동할 위도 경도 위치를 생성합니다 
