@@ -145,7 +145,7 @@ function list_result() {
     for (cafeteria in json_data) {
         let latitude_cal = latitude - Number(cafeteria.latitude);
         if (Math.ceil(Math.abs(latitude_cal)) <= 10) {
-            let latitude_ok = latitude_ok.push(cafeteria)
+            latitude_ok.push(cafeteria);
         }
     };
     console.log(latitude_ok)
@@ -154,7 +154,7 @@ function list_result() {
     for (cafeteria in latitude_ok) {
         let longitude_cal = longitude - Number(cafeteria.longitude);
         if (Math.ceil(Math.abs(longitude_cal)) <= 10) {
-            let longitude_ok = longitude_ok.push(cafeteria)
+            longitude_ok.push(cafeteria);
         }
     }
 
