@@ -9,7 +9,7 @@
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e58d2ef781fe0fa2dc40f1e1548213b5"></script>
         
         <script>
-            window.onload = function() {
+            $(function(){
             const div = document.getElementById('compass');
             
            div.addEventListener('mouseenter', (event) => {
@@ -19,7 +19,7 @@
             div.addEventListener('mouseleave', (event) => {
              result.innerHTML+= '<center class="compassicon"><img src="icons/compass_gray.svg" alt="compass"></center>';
         });
-       }
+       });
         </script>
     </head>
     <body>
