@@ -238,6 +238,7 @@ body {
     background-color: #66cc54;
     border: 0px solid;
     text-decoration-line: none;
+    float: right;
 }
 .call:hover {
     background-color: #148300
