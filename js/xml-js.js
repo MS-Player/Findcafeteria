@@ -13,14 +13,13 @@ request.get(requestUrl, (err,res,body) =>{
     }
     else {
         if(res.statusCode == 200){
-            var result = body // 기존 xml 파일
-            var xmlToJson = convert.xml2json(result, {compact: true, spaces: 4}); // json 변환 결과
-
-            fs.writeFile(xmlFile, result, 'utf8', function(error){
+            var xmlResult = body // 기존 xml 파일
+            fs.writeFile(xmlFile, xmlResult, 'utf8', function(error){
                 console.log('complete write xml')
             });
 
-            fs.writeFile(jsonFile, xmlToJson, 'utf8', function(error){
+            var jsonResult = convert.xml2json(xmlResult, {compact: true, spaces: 4}); // json 변환 결과
+            fs.writeFile(jsonFile, jsonResult, 'utf8', function(error){
                 console.log('complete write json')
             });
         }
