@@ -41,7 +41,6 @@ function locationLoadSuccess(pos){
     var infowindow = new kakao.maps.InfoWindow({
     content : iwContent,
     removable : iwRemoveable
-});
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
