@@ -58,7 +58,7 @@ function Seoul() {
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);           
-    alert('hi seoul~'); 
+    alert('hi seoul~~!'); 
 } 
 
 // 인천
@@ -250,11 +250,6 @@ function searchPlaces() {
 
     var keyword = document.getElementsByClassName('search').value;
 
-    if (!keyword.replace(/^\s+|\s+$/g, '')) {
-        alert('키워드를 입력해주세요!');
-        return false;
-    }
-
     // 주소로 좌표를 검색합니다
     geocoder.addressSearch(keyword, function(result, status) {
     
@@ -278,7 +273,10 @@ function searchPlaces() {
     
             // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
             map.setCenter(coords);
-        } 
+        }
+        else {
+            alert('주소를 받아오지 못했습니다.');
+        }
     });
 }
 
