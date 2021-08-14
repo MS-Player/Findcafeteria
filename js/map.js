@@ -31,22 +31,7 @@ function locationLoadSuccess(pos){
 
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
-    
-    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    var content = '<div class="slide">' +
-    '    <span class="slide">구의야구공원</span>' +
-    '</div>';
-
-// 커스텀 오버레이가 표시될 위치입니다 
-var position = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);  
-
-// 커스텀 오버레이를 생성합니다
-var customOverlay = new kakao.maps.CustomOverlay({
-    map: map,
-    position: position,
-    content: content,
-    yAnchor: 1 
-});
+   
 };
 
 function locationLoadError(pos){
