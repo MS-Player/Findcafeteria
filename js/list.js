@@ -6,9 +6,25 @@ function getLocation() {
   }
 }
 
-function list_result() {
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
 
-    let json_cafeteria_data = JSON.parse(json_data);
+function list_result() {
+    let json_cafeteria_data = readTextFile("json_data.json", function(text){
+        var data = JSON.parse(text);
+        console.log(data);
+    });
+
+    //let json_cafeteria_data = JSON.parse(json_data);
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
 
