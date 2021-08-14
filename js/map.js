@@ -1,6 +1,24 @@
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        function(location){
+
+            //succ - 유저가 허용버튼을 클릭하여 값을 가져올 수 있는 상태
+            var lat = location.coords.latitude;
+            var lon = location.coords.longitude;
+        },
+        function(error){
+            alert('위치 정보를 가져오는데 실패했습니다.');
+
+       }
+    );
+}
+else {
+    alert('위치 정보를 가져오는데 실패했습니다.');
+}
+
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
-        center: new kakao.maps.LatLng(37.56646, 126.98121), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
         level: 3, // 지도의 확대 레벨
         mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
 };
