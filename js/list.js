@@ -6,7 +6,9 @@ function getLocation() {
   }
 }
 
-function list_result(JSON.parse(json_data), position.coords.latitude, position.coords.longitude) {
+var jsonFile = JSON.parse(../json_date.json);
+
+function list_result(jsonFile, position.coords.latitude, position.coords.longitude) {
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
