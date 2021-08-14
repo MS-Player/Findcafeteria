@@ -1,7 +1,7 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(37.5643882, 126.9653482), // 지도의 중심좌표
-        level: 8 // 지도의 확대 레벨
+        level: 3 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -16,7 +16,7 @@ if (navigator.geolocation) {
             lon = position.coords.longitude; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '현재 계신곳!'
+            message = '<div class="search">현재 계신곳!</div>'
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
@@ -60,7 +60,7 @@ function displayMarker(locPosition, message) {
 // 서울
 function Seoul() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(37.5640455, 126.834003);
+    var moveLatLon = new kakao.maps.LatLng(37.5659436, 126.9778288);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -70,7 +70,7 @@ function Seoul() {
 // 인천
 function Ich() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(37.4646656, 126.6043103);
+    var moveLatLon = new kakao.maps.LatLng(37.4560939, 126.703727);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -80,7 +80,7 @@ function Ich() {
 // 광주
 function Gju() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.1768202, 126.7737602);
+    var moveLatLon = new kakao.maps.LatLng(35.1587263, 126.8497696);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -90,7 +90,7 @@ function Gju() {
 // 울산
 function Usn() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.5621694, 129.2814602);
+    var moveLatLon = new kakao.maps.LatLng(35.5390653, 129.3103105);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -100,7 +100,7 @@ function Usn() {
 // 부산
 function Psu() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.1645702, 129.0017602);
+    var moveLatLon = new kakao.maps.LatLng(35.1793999, 129.0739666);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -110,7 +110,7 @@ function Psu() {
 // 대구
 function Dau() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(35.8798688, 128.4966602);
+    var moveLatLon = new kakao.maps.LatLng(35.8712121, 128.6010165);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -206,9 +206,6 @@ function Jeju() {
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
 } 
-
-// 지도 레벨을 표시합니다
-displayLevel();
  
 // 지도 레벨은 지도의 확대 수준을 의미합니다
 // 지도 레벨은 1부터 14레벨이 있으며 숫자가 작을수록 지도 확대 수준이 높습니다

@@ -3,6 +3,11 @@
     font-family: GmarketSansTTF
 }
 
+body {
+    overflow-y:hidden;
+    margin: 0;
+}
+
 .search {
     width: 387px;
     height: 53px;
@@ -27,7 +32,7 @@
 .Bottombar {
     width: 350px;
     bottom: 30px;
-    justify-content: center;
+    margin: 0 20px 0;
     padding: 20px;
     border-radius: 35px;
     box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
@@ -45,7 +50,7 @@
 
 .slide {
     width: 407px;
-    height: 34px;
+    height: 45px;
     margin: 92px 0 0 21px;
     white-space: nowrap;
     overflow-x: auto;
@@ -66,12 +71,19 @@
     border: 3px solid #ffffff;
     border-radius: 17px;
     text-align: left;
-    box-shadow: 3px 3px 20px 0 rgba(60, 60, 60, 0.16);
+    box-shadow: 0 5px #DCDCDC;
+    /*box-shadow: 3px 3px 20px 0 rgba(60, 60, 60, 0.16);*/
     background-color: #fff;
     color: #b1b1b1;
 }
 .slide button:hover {
     color: #66cc54;
+}
+.slide button:active {
+    color: #fff;
+    background-color: #66cc54;
+    box-shadow: 0 2px #bbbbbb;
+    transform: translateY(4px);
 }
 
 .compass {
@@ -87,6 +99,11 @@
     justify-content: center;
 }
 
+.compassicon {
+    padding: 3.2px;
+}
+
+
 .zoom {
     width: 40px;
     height: 100px;
@@ -96,6 +113,9 @@
     border-radius: 34px;
     box-shadow: 5px 5px 20px 0 rgba(123, 123, 123, 0.16);
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .plus_icon {
@@ -116,4 +136,106 @@
     background-color: #ffffff;
     border:0px;
     cursor: pointer;
+}
+
+
+
+.cafeteria_list_box {
+    width: 350px;
+    margin: 0 20px 0;
+    padding: 23px 26px 23px 18px;
+    bottom: 120px;
+    border-radius: 22px;
+    background-color: #fff;
+}
+
+.cafeteria_name {
+    margin: 0 0 8px 0;
+    font-family: GmarketSansTTF;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.cafeteria_address {
+    margin: 8px 0 20px 0;
+    opacity: 0.77;
+    font-family: GmarketSansTTF;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    text-align: left;
+    color: #555;
+}
+
+.topic_txt {
+    margin: 20px 0 8px 0;
+    font-family: GmarketSansTTF;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.15px;
+    text-align: left;
+    color: #555;
+}
+
+.target_person {
+    margin: 8px 0 20px 0;
+    font-family: GmarketSansTTF;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.time {
+    margin: 6px 0 7px 0;
+    font-family: GmarketSansTTF;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.26px;
+    text-align: left;
+    color: #66cc54;
+}
+
+.day_of_the_week {
+    margin: 7px 0 3px 0;
+    opacity: 0.53;
+    font-family: GmarketSansTTF;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-align: left;
+    color: #555;
+}
+
+.call {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 80px;
+    padding: 14px;
+    border-radius: 14px;
+    background-color: #66cc54;
+    border: 0px solid;
+    text-decoration-line: none;
 }

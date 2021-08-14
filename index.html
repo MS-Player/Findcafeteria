@@ -7,11 +7,29 @@
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
 
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e58d2ef781fe0fa2dc40f1e1548213b5"></script>
-        
+
     </head>
     <body>
         <p><input type="text" class="search" style="position: absolute; z-index: 2;" placeholder="&#xF002; 지역, 건물명, 도로명을 검색하세요." /></p>
 
+        <div class="cafeteria_list_box" style="position:fixed; z-index: 2; display: flex; display: block;">
+            <span class="cafeteria_name">아현노인복지센터</span><br>
+            <span class="cafeteria_address">서울특별시 마포구 마포대로26길 19</span><br><br>
+            <span class="topic_txt">지급대상</span><br>
+            <span class="target_person">수급자, 차상위, 기타저소득</span><br><br>
+            <span class="topic_txt">영업시간</span><br>
+            <div style="display: flex;">
+                <div>
+                    <span class="time">11:30 ~ 12:30</span><br>
+                    <span class="day_of_the_week">(월, 화, 수, 목, 금)</span>
+                </div>
+                <a class="call" href='tel:010-0000-0000'>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="Bottombar" style="position:fixed; z-index: 2; display: flex;">
             <center style="flex: 1;"><img src="icons/map_green.svg" alt="map"></center>
             <center style="flex: 1;"><button onClick="location.href='list.html'"><img src="icons/list_grey.svg" alt="list"></button></center>
@@ -37,23 +55,23 @@
         </div>
 
         <button class="compass" style="position: absolute; z-index: 2;" onclick="displayMarker(locPosition)">
-            <center style="padding: 3.2px;">
-                <img src="icons/compass_grey.svg" onmouseover="this.src='icons/compass_green.svg'" onmouseout="this.src='icons/compass_grey.svg'" alt="map">
+            <center class="compassicon">
+                <img src="icons/compass_grey.svg" alt="compass">
             </center>
         </button>
 
         <div class="zoom" style="position: absolute; z-index: 2;">
-            <center>
-                <button class="zoom_button" onclick="zoomIn()">
-                    <img src="icons/Icon feather-plus.svg" alt="In">
-                </button>
-            </center>
-            <center><div class="zoom_bar"></div></center>
-            <center>
-                <button class="zoom_button" style="height: 25px;" onclick="zoomOut()">
-                    <img src="icons/Icon feather-minus.svg" alt="Out">
-                </button>
-            </center>
+            
+            <button class="zoom_button" onclick="zoomIn()">
+                <img src="icons/Icon feather-plus.svg" alt="In">
+            </button>
+            
+            <div class="zoom_bar"></div>
+            
+            <button class="zoom_button" style="height: 25px;" onclick="zoomOut()">
+                <img src="icons/Icon feather-minus.svg" alt="Out">
+            </button>
+            
         </div>
 
 
