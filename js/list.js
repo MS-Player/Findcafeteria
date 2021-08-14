@@ -39,8 +39,8 @@ function list_result() {
                     let lists = document.createElement("div")
                     const obj = document.getElementById("cafeteria_list");             
                     lists.innerHTML = '<div class="cafeteria_list_box">'+
-                        '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
-                        '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
+                        '   <span class="cafeteria_name" value="' + cafeteria.latitude._text + '">'+ cafeteria.fcltyNm._text +'</span><br>'+
+                        '   <span class="cafeteria_address" value="' + cafeteria.longitude._text + '">' + cafeteria.rdnmadr._text + '</span><br><br>'+
                         '   <span class="topic_txt">지급대상</span><br>'+
                         '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
                         '   <span class="topic_txt">영업시간</span><br>'+
