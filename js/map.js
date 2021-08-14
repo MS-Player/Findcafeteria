@@ -1,18 +1,18 @@
-  $(function() {        
-        // Geolocation API에 액세스할 수 있는지를 확인
-        if (navigator.geolocation) {
-            //위치 정보를 정기적으로 얻기
-            var id = navigator.geolocation.watchPosition(
-                    function(pos) {
-                        $('#latitude').html(pos.coords.latitude);     // 위도 
-                        $('#longitude').html(pos.coords.longitude); // 경도 
-                    });
-            
-        } else {
-            alert("이 브라우저에서는 현재 위치 불러오기가 지원되지 않습니다.")
-        }
-        
-    });
+function gps_tracking(){
+    if (gps_use) {
+        map.panTo(new kakao.maps.LatLng(gps_lat,gps_lng));
+        var gps_content = '<div><img class="pulse" draggable="false" unselectable="on" src="https://ssl.pstatic.net/static/maps/m/pin_rd.png" alt=""></div>';
+        var currentOverlay = new kakao.maps.CustomOverlay({
+            position: new kakao.maps.LatLng(gps_lat,gps_lng),
+            content: gps_content,
+            map: map
+        });
+        currentOverlay.setMap(map);
+    } else {
+      alert("접근차단하신 경우 새로고침, 아닌 경우 잠시만 기다려주세요.");
+      gps_check();
+    }
+}
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
