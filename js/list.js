@@ -14,21 +14,9 @@ function getLocation() {
     }
 }
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
 function list_result() {
-    readTextFile("json_data.json", function(text) {var json_cafeteria_data = JSON.parse(text);});
-    var json_cafeteria_data = JSON.parse(text);
+
+    let json_cafeteria_data = require('/Users/Documents/workspace/test.json');
 
     let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
