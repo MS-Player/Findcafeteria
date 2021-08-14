@@ -2,51 +2,6 @@ function list_result() {
     const json_data = [
         {
             "fcltyNm": {
-                "_text": "동산사회복지관"
-            },
-            "rdnmadr": {
-                "_text": "전라북도 익산시 동천로7길 26-1"
-            },
-            "lnmadr": {},
-            "operInstitutionNm": {
-                "_text": "동산사회복지관"
-            },
-            "phoneNumber": {
-                "_text": "063-842-2253"
-            },
-            "mlsvPlace": {
-                "_text": "동산사회복지관"
-            },
-            "mlsvTrget": {
-                "_text": "결식노인,저소득층"
-            },
-            "mlsvTime": {
-                "_text": "중식(12:00-13:00)"
-            },
-            "mlsvDate": {
-                "_text": "\"금\""
-            },
-            "operOpenDate": {
-                "_text": "2017-01-01"
-            },
-            "operCloseDate": {
-                "_text": "2017-12-31"
-            },
-            "latitude": {
-                "_text": "35.93217035"
-            },
-            "longitude": {
-                "_text": "126.9699914"
-            },
-            "referenceDate": {
-                "_text": "2020-12-22"
-            },
-            "insttCode": {
-                "_text": "6450000"
-            }
-        },
-        {
-            "fcltyNm": {
                 "_text": "거제시종합사회복지관"
             },
             "rdnmadr": {
