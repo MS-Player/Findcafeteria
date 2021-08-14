@@ -40,9 +40,10 @@ function locationLoadError(pos){
     alert('위치 정보를 가져오는데 실패했습니다.');
 };
 
- $(function() {
-    	navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
-    });
+// 위치 가져오기 버튼 클릭시
+function getCurrentPosBtn(){
+    navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
+}; 
 
 // 서울
 function Seoul() {
