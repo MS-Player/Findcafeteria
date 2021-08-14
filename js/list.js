@@ -1,4 +1,4 @@
-function list_result(json_data) {
+function list_result() {
     const json_data = [
         {
             "fcltyNm": {
