@@ -1,19 +1,18 @@
 function getLocation() {
     if (navigator.geolocation) { // GPS를 지원하면
-      navigator.geolocation.getCurrentPosition(function(position) {
-        alert(position.coords.latitude + ' ' + position.coords.longitude);
-      }, function(error) {
-        console.error(error);
-      }, {
-        enableHighAccuracy: false,
-        maximumAge: 0,
-        timeout: Infinity
-      });
+        navigator.geolocation.getCurrentPosition(function(position) {
+            return position.coords.latitude, position.coords.longitude;
+        }, function(error) {
+            console.error(error);
+        }, {
+            enableHighAccuracy: false,
+            maximumAge: 0,
+            timeout: Infinity
+        });
     } else {
-      alert('GPS를 지원하지 않습니다');
+        alert('GPS가 차단되었거나 찾을 수 없습니다.');
     }
-  }
-
+}
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -29,12 +28,12 @@ function readTextFile(file, callback) {
 
 function list_result() {
     readTextFile("json_data.json", function(text){
-        let json_cafeteria_data = JSON.parse(text);
+        var json_cafeteria_data = JSON.parse(text);
     });
-    getLocation();
+    let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
-    let latitude = showPosition.coords.latitude;
-    let longitude = showPosition.coords.longitude;
+    //let latitude = showPosition.coords.latitude;
+    //let longitude = showPosition.coords.longitude;
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
