@@ -7,8 +7,19 @@
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
         
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e58d2ef781fe0fa2dc40f1e1548213b5"></script>
+        
+        <script>
+            const div = document.getElementById('my_div');
+            
+           div.addEventListener('mouseover', (event) => {
+           result.innerHTML+= '<center class="compassicon"><img src="icons/compass_grey.svg" alt="compass"></center>';
+          });
 
+            div.addEventListener('mouseout', (event) => {
+            result.innerHTML+= ''<center class="compassicon"><img src="icons/compass_green.svg" alt="compass"></center>'';
+            });
 
+        </script>
     </head>
     <body>
         <p><input type="text" class="search" style="position: absolute; z-index: 2;" placeholder="&#xF002; 지역, 건물명, 도로명을 검색하세요." onkeypress="searchPlaces()"/></p>
@@ -55,7 +66,7 @@
             <button onclick="Chnn()">충청북도</button>
         </div>
 
-        <button class="compass" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
+        <button id="compass" class="compass" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
             <center class="compassicon">
                 <img src="icons/compass_grey.svg" alt="compass">
             </center>
