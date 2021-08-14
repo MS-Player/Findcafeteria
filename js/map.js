@@ -26,7 +26,8 @@ function locationLoadSuccess(pos){
     // 마커 생성
     var marker = new kakao.maps.Marker({
         position: markerPosition,
-        image: markerImage // 마커이미지 설정 
+        position: position,
+        image: markerImage, // 마커이미지 설정 
         clickable: true // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
     });
 
