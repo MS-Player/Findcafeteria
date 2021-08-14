@@ -226,4 +226,5 @@ function list_result(json_data) {
             '</div>'
         obj.appendChild(lists);
     }
+    // 끝 제발 잘 굴러가면 좋겠다
 }
