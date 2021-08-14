@@ -230,7 +230,6 @@ body {
 }
 
 .call {
-    position:fixed;
     width: 30px;
     height: 30px;
     margin: 0 0 0 80px;
@@ -239,7 +238,6 @@ body {
     background-color: #66cc54;
     border: 0px solid;
     text-decoration-line: none;
-    right: 25px;
 }
 .call:hover {
     background-color: #148300
