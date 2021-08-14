@@ -20,9 +20,6 @@ function locationLoadSuccess(pos){
       // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition);
 
-    // 기존에 마커가 있다면 제거
-    marker.setMap(null);
-    marker.setMap(map);
 };
 
 function locationLoadError(pos){
