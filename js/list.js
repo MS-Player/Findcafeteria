@@ -7,8 +7,8 @@ function getLocation() {
 }
 
 function list_result() {
-    
-    let json_data = JSON.parse("../json_date.json");
+
+    let json_cafeteria_data = JSON.parse(json_data);
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
 
@@ -16,7 +16,7 @@ function list_result() {
     let longitude_ok = new Array();
 
     // 위도 처리
-    for (let cafeteria of json_data) {
+    for (let cafeteria of json_cafeteria_data) {
         let latitude_cal = latitude - Number(cafeteria.latitude._text);
         if (Math.abs(latitude_cal) <= 0.001) {
             latitude_ok.push(cafeteria);
