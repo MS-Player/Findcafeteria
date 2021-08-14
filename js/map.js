@@ -8,6 +8,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 // 지도를 생성한다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
+// 내 위치 마커 START
 function locationLoadSuccess(pos){
     // 현재 위치 받아오기
     var currentPos = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
@@ -15,23 +16,23 @@ function locationLoadSuccess(pos){
     // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
     map.panTo(currentPos);
 
-    var imageSrc = 'https://ms-player.github.io/icons/mylocation.svg', // 마커이미지의 주소입니다    
-    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    var imageSrc = '../icons/mylocation.svg', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(128, 128), // 마커이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
       
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다 
+    markerPosition = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude); // 마커가 표시될 위치입니다 
     
     // 마커 생성
     var marker = new kakao.maps.Marker({
-        position: currentPos
+        position: markerPosition,
         image: markerImage // 마커이미지 설정 
     });
 
-    // 기존에 마커가 있다면 제거
-    marker.setMap(null);
+    // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
+    
 };
 
 function locationLoadError(pos){
@@ -42,6 +43,8 @@ function locationLoadError(pos){
 function getCurrentPosBtn(){
     navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
 };
+// 내 위치 마커 END
+
 
 // 주소-좌표 변환 객체를 생성합니다
 var geocoder = new kakao.maps.services.Geocoder();
@@ -190,7 +193,27 @@ function Chnn() {
 // 제주
 function Jeju() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(33.6632403, 126.2928464);
+    var moveLatLon = new kakao.maps.LatLng(33.4889923, 126.4973843);
+    
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    map.panTo(moveLatLon);            
+} 
+
+// 대전
+function Djn() {
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(36.3490194, 127.3842079);
+    
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    map.panTo(moveLatLon);            
+} 
+
+// 세종
+function Man() {
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(36.4779772, 127.2864818);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
@@ -256,5 +279,20 @@ function searchPlaces() {
                 map.setCenter(coords);
             } 
         });
+    }
+}
+
+// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+function setMapType(maptype) { 
+    var roadmapControl = document.getElementById('btnRoadmap');
+    var skyviewControl = document.getElementById('btnSkyview'); 
+    if (maptype === 'roadmap') {
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+        roadmapControl.className = 'selected_btn';
+        skyviewControl.className = 'btn';
+    } else {
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+        skyviewControl.className = 'selected_btn';
+        roadmapControl.className = 'btn';
     }
 }
