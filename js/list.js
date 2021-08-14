@@ -156,32 +156,37 @@ function list_result() {
             longitude_ok.push(cafeteria);
         }
     }
+    const obj = document.getElementById("cafeteria_list");
 
-    // 리스트 처리
-    for (let cafeteria of longitude_ok) {
-        const obj = document.getElementById("cafeteria_list");
-        console.log(obj)
-
+    if (longitude_ok.length === 0) {
         let lists = document.createElement("div")
-        lists.innerHTML = '<div class="cafeteria_list_box">'+
-            '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
-            '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
-            '   <span class="topic_txt">지급대상</span><br>'+
-            '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
-            '   <span class="topic_txt">영업시간</span><br>'+
-            '   <div style="display: flex;">'+
-            '       <div>'+
-            '           <span class="time">' + cafeteria.mlsvTime._text + '</span><br>'+
-            '           <span class="day_of_the_week">' + cafeteria.mlsvDate._text + '</span>'+
-            '       </div>'+
-            '       <a class="call" href="tel:' + cafeteria.phoneNumber._text + '">'+
-            '           <div style="display: flex; align-items: center; justify-content: center;">'+
-            '               <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
-            '           </div>'+
-            '       </a>'+
-            '   </div>'+
-            '</div>'
+        lists.innerHTML = '<div><h1 style="color: #6F6864;">회원님의 근처엔<br>무료 급식소가 없네요 :(</h1></div>'
         obj.appendChild(lists);
+    } else {
+        // 리스트 처리
+        for (let cafeteria of longitude_ok) {
+            console.log(obj)
+
+            let lists = document.createElement("div")
+            lists.innerHTML = '<div class="cafeteria_list_box">'+
+                '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
+                '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
+                '   <span class="topic_txt">지급대상</span><br>'+
+                '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
+                '   <span class="topic_txt">영업시간</span><br>'+
+                '   <div style="display: flex;">'+
+                '       <div>'+
+                '           <span class="time">' + cafeteria.mlsvTime._text + '</span><br>'+
+                '           <span class="day_of_the_week">' + cafeteria.mlsvDate._text + '</span>'+
+                '       </div>'+
+                '       <a class="call" href="tel:' + cafeteria.phoneNumber._text + '">'+
+                '           <div style="display: flex; align-items: center; justify-content: center;">'+
+                '               <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
+                '           </div>'+
+                '       </a>'+
+                '   </div>'+
+                '</div>'
+            obj.appendChild(lists);
+        }
     }
-    // 끝 제발 잘 굴러가면 좋겠다
 }
