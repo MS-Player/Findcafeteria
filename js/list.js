@@ -31,10 +31,10 @@ function list_result() {
             "operOpenDate": {},
             "operCloseDate": {},
             "latitude": {
-                "_text": "34.86939501"
+                "_text": "35.9241234"
             },
             "longitude": {
-                "_text": "128.6461277"
+                "_text": "128.2859217"
             },
             "referenceDate": {
                 "_text": "2020-07-26"
@@ -76,10 +76,10 @@ function list_result() {
             },
             "operCloseDate": {},
             "latitude": {
-                "_text": "35.9156622"
+                "_text": "35.9241234"
             },
             "longitude": {
-                "_text": "128.2843144"
+                "_text": "128.2859217"
             },
             "referenceDate": {
                 "_text": "2020-07-15"
