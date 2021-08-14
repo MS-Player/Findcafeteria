@@ -57,11 +57,6 @@ function displayMarker(locPosition, message) {
 }    
 
 
-// 위치 가져오기 버튼 클릭시
-function getCurrentPosBtn(){
-   navigator.geolocation.getCurrentPosition(function(position);
-};
-
 // 서울
 function Seoul() {
     // 이동할 위도 경도 위치를 생성합니다 
