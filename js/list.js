@@ -1,10 +1,19 @@
 function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "GPS가 차단되었거나 찾을 수 없습니다.";
+    if (navigator.geolocation) { // GPS를 지원하면
+      navigator.geolocation.getCurrentPosition(function(position) {
+        alert(position.coords.latitude + ' ' + position.coords.longitude);
+      }, function(error) {
+        console.error(error);
+      }, {
+        enableHighAccuracy: false,
+        maximumAge: 0,
+        timeout: Infinity
+      });
+    } else {
+      alert('GPS를 지원하지 않습니다');
+    }
   }
-}
+
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
