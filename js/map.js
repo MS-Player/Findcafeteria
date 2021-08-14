@@ -1,12 +1,10 @@
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-    mapOption = {
-        center: new kakao.maps.LatLng(37.56646, 126.98121), // 지도의 중심좌표
-        level: 3, // 지도의 확대 레벨
-        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
-    };
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨 
+    }; 
 
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption); 
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
 if (navigator.geolocation) {
@@ -61,7 +59,7 @@ function displayMarker(locPosition, message) {
 
 // 위치 가져오기 버튼 클릭시
 function getCurrentPosBtn(){
-    navigator.geolocation.getCurrentPosition();
+   navigator.geolocation.getCurrentPosition(function(position);
 };
 
 // 서울
