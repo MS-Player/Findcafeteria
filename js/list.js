@@ -27,7 +27,7 @@ function readTextFile(file, callback) {
 }
 
 function list_result() {
-    var longitude = readTextFile("json_data.json", function(text){
+    var json_cafeteria_data = readTextFile("json_data.json", function(text){
         var json_cafeteria_data = JSON.parse(text);
     });
 
