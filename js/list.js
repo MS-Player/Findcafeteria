@@ -27,9 +27,10 @@ function readTextFile(file, callback) {
 }
 
 function list_result() {
-    readTextFile("json_data.json", function(text){
+    var longitude = readTextFile("json_data.json", function(text){
         var json_cafeteria_data = JSON.parse(text);
     });
+
     let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
     //let latitude = showPosition.coords.latitude;
