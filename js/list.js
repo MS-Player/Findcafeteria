@@ -1,3 +1,6 @@
+var readData = JSON.parse(data);
+console.log(readData);
+
 function list_result(json_data, latitude, longitude) {
 
     let latitude_ok = new Array();
@@ -18,6 +21,8 @@ function list_result(json_data, latitude, longitude) {
             longitude_ok.push(cafeteria);
         }
     }
+    
+    
     const obj = document.getElementById("cafeteria_list");
 
     if (longitude_ok.length === 0) {
