@@ -135,34 +135,33 @@ function list_result() {
         }
     ];
 
-    let latitude = 35.2924423;
+    let latitude = 35.9241234;
     let longitude = 128.2859217;
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
 
     // 위도 처리
-    for (cafeteria in json_data) {
-        console.log('latitude_cal : ', latitude_cal, "cafeteria.latitude : ", Number(cafeteria.latitude))
-        let latitude_cal = latitude - Number(cafeteria.latitude);
-        console.log(latitude_cal)
-        if (Math.ceil(Math.abs(latitude_cal)) <= 10) {
+    for (let cafeteria of json_data) {
+        let latitude_cal = latitude - Number(cafeteria.latitude._text);
+        if (Math.abs(latitude_cal) <= 0.001) {
             latitude_ok.push(cafeteria);
         }
     };
-    console.log(latitude_ok)
 
     //경도 처리
-    for (cafeteria in latitude_ok) {
-        let longitude_cal = longitude - Number(cafeteria.longitude);
-        if (Math.ceil(Math.abs(longitude_cal)) <= 10) {
+    for (let cafeteria of latitude_ok) {
+        let longitude_cal = longitude - Number(cafeteria.longitude._text);
+        if (Math.abs(longitude_cal) <= 0.001) {
             longitude_ok.push(cafeteria);
         }
     }
 
     // 리스트 처리
-    for (cafeteria in longitude_ok) {
-        var obj = document.getElementById("cafeteria_list");
+    for (let cafeteria of longitude_ok) {
+        const obj = document.getElementById("cafeteria_list");
+        console.log(obj)
+        
         let lists = document.createElement("div")
         lists.setAttribute = ("class", "cafeteria_list_box");
         lists.innerHTML ='<span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
