@@ -58,7 +58,7 @@ function Seoul() {
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);           
-    alert('안뇽 서울!'); 
+    alert('안뇽 서울!!!'); 
 } 
 
 // 인천
@@ -248,7 +248,7 @@ function zoomOut() {
 // 키워드 검색을 요청하는 함수입니다
 function searchPlaces() {
 
-    var keyword = document.getElementsByClassName('search').value;
+    var keyword = document.getElementsByClassName('search');
     alert(keyword);
 
     // // 주소로 좌표를 검색합니다
