@@ -32,7 +32,7 @@ function locationLoadSuccess(pos){
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
     
-});
+};
 
 function locationLoadError(pos){
     alert('위치 정보를 가져오는데 실패했습니다.');
