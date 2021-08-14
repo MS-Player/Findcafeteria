@@ -148,6 +148,7 @@ function list_result() {
             let latitude_ok = latitude_ok.push(cafeteria)
         }
     };
+    console.log(latitude_ok)
 
     //경도 처리
     for (cafeteria in latitude_ok) {
@@ -162,8 +163,7 @@ function list_result() {
         var obj = document.getElementById("cafeteria_list");
         let lists = document.createElement("div")
         lists.setAttribute = ("class", "cafeteria_list_box");
-        lists.innerHTML = '<div class="cafeteria_list_box">'+
-            '<span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
+        lists.innerHTML ='<span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
             '<span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
             '<span class="topic_txt">지급대상</span><br>'+
             '<span class="target_person">수급자, 차상위, 기타저소득</span><br><br>'+
