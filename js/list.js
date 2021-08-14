@@ -14,9 +14,25 @@ function getLocation() {
     }
 }
 
-function list_result() {
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    return rawFile.send(null);
+}
 
-    let json_cafeteria_data = require('/Users/Documents/workspace/test.json');
+function list_result() {
+    //var x = new XMLHttpRequest();
+    //x.open("GET","json_data.json");
+    //x.send();
+    let json_cafeteria_data = readTextFile("json_data.json", function(text) {
+        JSON.parse(text);
+    });
 
     let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
