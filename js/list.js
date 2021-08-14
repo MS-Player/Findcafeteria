@@ -14,30 +14,46 @@ function getLocation() {
     }
 }
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
+const convert = require('xml-js');
+const request = require('request');
+const fs = require('fs')
+
+var requestUrl = `http://api.data.go.kr/openapi/tn_pubr_public_free_mlsv_api?serviceKey=w4WgRe0atRPd8sTRA1ca%2BWFFWFmvzG7mwOKRIoNtnUucJyKMjEzCfngxtf9BZaE5SYgG849atzzWO1L7mOyi5g%3D%3D&type=xml&numOfRows=100000`
+var xmlFile = 'xml_data.xml'
+var jsonFile = 'json_data.json'
+
+function givemejson() {
+    request.get(requestUrl, (err,res,body) =>{
+        if(err){
+            console.log(`err => ${err}`)
         }
-    }
-    return rawFile.send(null);
+        else {
+            if(res.statusCode == 200){
+                var xmlResult = body // 기존 xml 파일
+                fs.writeFile(xmlFile, xmlResult, 'utf8', function(error){
+                    console.log('complete write xml')
+                });
+
+                var jsonResult = convert.xml2json(xmlResult, {compact: true, spaces: 4}); // json 변환 결과
+                return jsonResult
+                //fs.writeFile(jsonFile, jsonResult, 'utf8', function(error){
+                //    console.log('complete write json')
+                //});
+            }
+        }
+    })
 }
 
 function list_result() {
-    var x = new XMLHttpRequest();
-    x.open("GET","json_data.json");
-    x.send();
-    json_cafeteria_data = JSON.parse(x);
+    
+    let json_cafeteria_data = givemejson();
 
 
 
     //let json_cafeteria_data = readTextFile("json_data.json", function(text) {
     //    JSON.parse(text);
     //});
-    console.log(JSON.parse(x))
+    console.log(json_cafeteria_data)
 
     let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
