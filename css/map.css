@@ -87,7 +87,10 @@ body {
 }
 
 .compass {
-    width: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
     height: 60px;
     border-radius: 75px;
     right: 20px;
@@ -96,7 +99,6 @@ body {
     background-color: #fff;
     border: 3px solid #ffffff;
     cursor: pointer;
-    justify-content: center;
 }
 
 .compassicon {
