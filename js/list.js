@@ -1,7 +1,12 @@
-var readData = JSON.parse(data);
-console.log(readData);
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "GPS가 차단되었거나 찾을 수 없습니다.";
+  }
+}
 
-function list_result(json_data, latitude, longitude) {
+function list_result(JSON.parse(json_data), position.coords.latitude, position.coords.longitude) {
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
