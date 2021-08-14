@@ -19,9 +19,8 @@ function readTextFile(file, callback) {
 }
 
 function list_result() {
-    let json_cafeteria_data = readTextFile("json_data.json", function(text){
-        var data = JSON.parse(text);
-        console.log(data);
+    readTextFile("json_data.json", function(text){
+        let json_cafeteria_data = JSON.parse(text);
     });
 
     //let json_cafeteria_data = JSON.parse(json_data);
