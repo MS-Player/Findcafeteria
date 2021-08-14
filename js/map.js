@@ -49,18 +49,6 @@ function locationLoadSuccess(pos){
       infowindow.open(map, marker);  
 });
 
-// 마커에 마우스오버 이벤트를 등록합니다
-kakao.maps.event.addListener(marker, 'click', function(mouseEvent) {
-  // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
-    infowindow.open(map, marker);
-});
-
-// 마커에 마우스아웃 이벤트를 등록합니다
-kakao.maps.event.addListener(marker, 'click', function(mouseEvent) {
-    // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
-    infowindow.close();
-});
-
 function locationLoadError(pos){
     alert('위치 정보를 가져오는데 실패했습니다.');
 };
