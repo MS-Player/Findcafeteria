@@ -34,7 +34,7 @@ function locationLoadSuccess(pos){
     
     // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
     var content = '<div class="slide">' +
-    '    내가 있는 곳!' +
+    '    <span class="slide">구의야구공원</span>' +
     '</div>';
 
 // 커스텀 오버레이가 표시될 위치입니다 
