@@ -80,6 +80,7 @@ body {
 }
 
 .cafeteria_list_box {
+    width: 350px;
     margin: 15px 2px;
     padding: 23px 26px 23px 18px;
     border-radius: 22px;
