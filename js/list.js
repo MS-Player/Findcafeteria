@@ -88,51 +88,7 @@ function list_result() {
                 "_text": "5210000"
             }
         },
-        {
-            "fcltyNm": {
-                "_text": "이웃과하나노인복지센터"
-            },
-            "rdnmadr": {
-                "_text": "경상북도 성주군 성주읍 예산3길 8-4"
-            },
-            "lnmadr": {
-                "_text": "경상북도 성주군 성주읍 예산리 466"
-            },
-            "operInstitutionNm": {
-                "_text": "이웃과하나노인복지센터"
-            },
-            "phoneNumber": {
-                "_text": "054-931-1611"
-            },
-            "mlsvPlace": {
-                "_text": "이웃과하나노인복지센터"
-            },
-            "mlsvTrget": {
-                "_text": "60세이상 저소득층 독거노인 및 결식노인"
-            },
-            "mlsvTime": {
-                "_text": "중식(12:00~13:00)"
-            },
-            "mlsvDate": {
-                "_text": "\"화, 수\""
-            },
-            "operOpenDate": {
-                "_text": "2004-11-05"
-            },
-            "operCloseDate": {},
-            "latitude": {
-                "_text": "35.9244472"
-            },
-            "longitude": {
-                "_text": "128.2859217"
-            },
-            "referenceDate": {
-                "_text": "2020-07-15"
-            },
-            "insttCode": {
-                "_text": "5210000"
-            }
-        }
+        
     ];
 
     let latitude = 35.9241234;
@@ -160,7 +116,7 @@ function list_result() {
 
     if (longitude_ok.length === 0) {
         let lists = document.createElement("div")
-        lists.innerHTML = '<div><h1 style="color: #6F6864;">회원님의 근처엔<br>무료 급식소가 없네요 :(</h1></div>'
+        lists.innerHTML = '<center><h1 class="no_cafeteria">회원님의 근처엔<br>무료 급식소가 없네요 :(</h1></center>'
         obj.appendChild(lists);
     } else {
         // 리스트 처리
