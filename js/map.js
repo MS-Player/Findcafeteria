@@ -34,7 +34,6 @@ function getCurrentPosBtn(){
     navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
 };
 
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 // 서울
 function Seoul() {
     // 이동할 위도 경도 위치를 생성합니다 
