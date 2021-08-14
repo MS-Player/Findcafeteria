@@ -21,16 +21,15 @@ function locationLoadSuccess(pos){
       
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다 
+    markerPosition = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude); // 마커가 표시될 위치입니다 
     
     // 마커 생성
     var marker = new kakao.maps.Marker({
-        position: currentPos
+        position: markerPosition,
         image: markerImage // 마커이미지 설정 
     });
 
-    // 기존에 마커가 있다면 제거
-    marker.setMap(null);
+    // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
 };
 
