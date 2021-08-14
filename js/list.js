@@ -22,7 +22,7 @@ function list_result() {
     readTextFile("json_data.json", function(text){
         let json_cafeteria_data = JSON.parse(text);
     });
-
+    getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
     let latitude = showPosition.coords.latitude;
     let longitude = showPosition.coords.longitude;
