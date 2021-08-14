@@ -27,13 +27,17 @@ function readTextFile(file, callback) {
 }
 
 function list_result() {
-    //var x = new XMLHttpRequest();
-    //x.open("GET","json_data.json");
-    //x.send();
-    let json_cafeteria_data = readTextFile("json_data.json", function(text) {
-        JSON.parse(text);
-    });
-    console.log(json_cafeteria_data)
+    var x = new XMLHttpRequest();
+    x.open("GET","json_data.json");
+    x.send();
+    json_cafeteria_data = JSON.parse(x);
+
+
+
+    //let json_cafeteria_data = readTextFile("json_data.json", function(text) {
+    //    JSON.parse(text);
+    //});
+    console.log(JSON.parse(x))
 
     let latitude, longitude = getLocation();
     //let json_cafeteria_data = JSON.parse(json_data);
