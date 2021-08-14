@@ -135,8 +135,8 @@ function list_result() {
         }
     ];
 
-    let latitude = 35.93217099;
-    let longitude = 126.9699930;
+    let latitude = 35.2924423;
+    let longitude = 128.2859217;
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
