@@ -169,13 +169,12 @@ body {
 .call {
     width: 30px;
     height: 30px;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 80px;
     padding: 14px;
     border-radius: 14px;
     background-color: #66cc54;
     border: 0px solid;
     text-decoration-line: none;
-    float: right;
 }
 .call:hover {
     background-color: #148300
