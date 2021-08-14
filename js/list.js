@@ -25,8 +25,8 @@ function list_result() {
     });
 
     //let json_cafeteria_data = JSON.parse(json_data);
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let latitude = showPosition.coords.latitude;
+    let longitude = showPosition.coords.longitude;
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
