@@ -143,6 +143,7 @@ function list_result() {
 
     // 위도 처리
     for (cafeteria in json_data) {
+        console.log('latitude_cal : ', latitude_cal, "cafeteria.latitude : ", Number(cafeteria.latitude))
         let latitude_cal = latitude - Number(cafeteria.latitude);
         console.log(latitude_cal)
         if (Math.ceil(Math.abs(latitude_cal)) <= 10) {
