@@ -1,9 +1,7 @@
 function list_result() {
-    const obj = document.getElementById("cafeteria_list");
-    let lists = document.createElement("div")
-
     if (navigator.geolocation) { // GPS를 지원하면
         navigator.geolocation.getCurrentPosition(function(position) {
+
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
 
@@ -12,26 +10,34 @@ function list_result() {
 
             // 위도 처리
             for (let cafeteria of json_data) {
-                let latitude_cal = latitude - Number(latitude);
-                if (Math.abs(latitude_cal) <= 0.001) {
-                    latitude_ok.push(cafeteria);
-                }
+                try {
+                    let latitude_cal = Number(cafeteria.latitude._text) - Number(latitude);
+                    if (Math.abs(latitude_cal) <= 0.1) {
+                        latitude_ok.push(cafeteria);
+                    }
+                } catch {}
             };
-        
+
             //경도 처리
             for (let cafeteria of latitude_ok) {
-                let longitude_cal = longitude - Number(longitude);
-                if (Math.abs(longitude_cal) <= 0.001) {
-                    longitude_ok.push(cafeteria);
-                }
-            }
+                try {
+                    let longitude_cal = Number(cafeteria.longitude._text) - Number(longitude);
+                    if (Math.abs(longitude_cal) <= 0.1) {
+                        longitude_ok.push(cafeteria);
+                    }
+                } catch {}
+            };
 
             if (longitude_ok.length === 0) {
+                let lists = document.createElement("div")
+                const obj = document.getElementById("cafeteria_list");
                 lists.innerHTML = '<center><h1 class="no_cafeteria">회원님의 근처엔<br>무료 급식소가 없네요 :(</h1></center>'
                 obj.appendChild(lists);
             } else {
                 // 리스트 처리
-                for (let cafeteria of longitude_ok) {                
+                for (let cafeteria of longitude_ok) {   
+                    let lists = document.createElement("div")
+                    const obj = document.getElementById("cafeteria_list");             
                     lists.innerHTML = '<div class="cafeteria_list_box">'+
                         '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
                         '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
