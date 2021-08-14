@@ -259,6 +259,7 @@ function searchPlaces() {
         if (status === kakao.maps.services.Status.OK) {
     
             var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+            alert('검색 성공!');
     
             // 결과값으로 받은 위치를 마커로 표시합니다
             // var marker = new kakao.maps.Marker({
