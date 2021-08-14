@@ -10,7 +10,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 function locationLoadSuccess(pos){
     // 현재 위치 받아오기
-    var currentPos = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
+    var currentPos = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
 
     // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
     map.panTo(currentPos);
