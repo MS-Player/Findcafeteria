@@ -54,6 +54,7 @@
             <button onclick="Chnn()">충청북도</button>
         </div>
 
+       
         <button id="compass" class="compass" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
             <center class="compassicon">
                 <img src="icons/compass_grey.svg" alt="compass"
@@ -76,7 +77,15 @@
             
         </div>
 
-
+  <div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div> 
+    <!-- 지도타입 컨트롤 div 입니다 -->
+    <div class="custom_typecontrol radius_border">
+        <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+        <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+    </div>
+ </div>       
+        
         <!-- 지도를 표시할 div 입니다 -->
         <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
         <script type="text/javascript" src="js/map.js"></script>
