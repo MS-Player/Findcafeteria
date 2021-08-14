@@ -1,13 +1,22 @@
-function locationLoadSuccess(pos){
-var mydata = JSON.parse(json_data);
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "GPS가 차단되었거나 찾을 수 없습니다.";
+  }
+}
 
-function list_result(mydata, pos.coords.latitude, pos.coords.longitude) {
+function list_result() {
+
+    let json_cafeteria_data = JSON.parse(json_data);
+    let latitude = showPosition.coords.latitude;
+    let longitude = showPosition.coords.longitude;
 
     let latitude_ok = new Array();
     let longitude_ok = new Array();
 
     // 위도 처리
-    for (let cafeteria of json_data) {
+    for (let cafeteria of json_cafeteria_data) {
         let latitude_cal = latitude - Number(cafeteria.latitude._text);
         if (Math.abs(latitude_cal) <= 0.001) {
             latitude_ok.push(cafeteria);
@@ -21,7 +30,7 @@ function list_result(mydata, pos.coords.latitude, pos.coords.longitude) {
             longitude_ok.push(cafeteria);
         }
     }
- });    
+    
     
     const obj = document.getElementById("cafeteria_list");
 
