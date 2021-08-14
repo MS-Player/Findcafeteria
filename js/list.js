@@ -161,24 +161,25 @@ function list_result() {
     for (let cafeteria of longitude_ok) {
         const obj = document.getElementById("cafeteria_list");
         console.log(obj)
-        
+
         let lists = document.createElement("div")
-        lists.setAttribute = ("class", "cafeteria_list_box");
-        lists.innerHTML ='<span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
-            '<span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
-            '<span class="topic_txt">지급대상</span><br>'+
-            '<span class="target_person">수급자, 차상위, 기타저소득</span><br><br>'+
-            '<span class="topic_txt">영업시간</span><br>'+
-            '<div style="display: flex;">'+
-            '    <div>'+
-            '        <span class="time">11:30 ~ 12:30</span><br>'+
-            '        <span class="day_of_the_week">(월, 화, 수, 목, 금)</span>'+
-            '    </div>'+
-            '    <a class="call" href="tel:010-0000-0000">'+
-            '        <div style="display: flex; align-items: center; justify-content: center;">'+
-            '            <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
-            '        </div>'+
-            '    </a>'+
+        lists.innerHTML = '<div class="cafeteria_list_box">'+
+            '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
+            '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
+            '   <span class="topic_txt">지급대상</span><br>'+
+            '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
+            '   <span class="topic_txt">영업시간</span><br>'+
+            '   <div style="display: flex;">'+
+            '       <div>'+
+            '           <span class="time">' + cafeteria.mlsvTime._text + '</span><br>'+
+            '           <span class="day_of_the_week">' + cafeteria.mlsvDate._text + '</span>'+
+            '       </div>'+
+            '       <a class="call" href="tel:' + cafeteria.phoneNumber._text + '">'+
+            '           <div style="display: flex; align-items: center; justify-content: center;">'+
+            '               <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
+            '           </div>'+
+            '       </a>'+
+            '   </div>'+
             '</div>'
         obj.appendChild(lists);
     }
