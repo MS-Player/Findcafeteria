@@ -1,11 +1,8 @@
 {
-  "routes": [
-    {
-      "route": "/json_data.json",
-      "allowedRoles": ["anonymous"]
-    }
+    route": "/json_data.json",
+    "allowedRoles": ["anonymous"]
+}
     
-  "mimeTypes": {
-    ".json": "text/json"
-    }
+"mimeTypes": {
+  ".json": "text/json"
 }
