@@ -7,6 +7,6 @@
 ],
 
 "mimeTypes": {
-   ".json": "application/json"
+   ".json": "text/json"
   }
 }
