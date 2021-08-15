@@ -335,6 +335,7 @@ function displayMarker(positions) {
         image : markerImage, // 마커 이미지 
         // clickable: true
     });
+    marker.setClickable(true);
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function () {

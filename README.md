@@ -24,5 +24,6 @@ Findcafeteria는 노인분들과, 저소득자 분들이 더욱 자신이 거주
 * 카카오맵
 * G마켓 산스(무료 라이센스 폰트)
 * hackalearn 2021
+* Microsoft Azure
 
 해당 웹앱은 hackalearn 2021 출품작입니다.
