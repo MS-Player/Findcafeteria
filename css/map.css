@@ -244,4 +244,22 @@ body {
 .call:hover {
     background-color: #148300
 }
-  
+
+.compass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 75px;
+    left: 20px;
+    margin: 180px 0 0;
+    box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
+    background-color: #fff;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+}
+
+.compassicon {
+    padding: 3.2px;
+}

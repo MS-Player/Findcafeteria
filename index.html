@@ -90,7 +90,15 @@
                 <img src="icons/Icon feather-minus.svg" alt="Out">
             </button>
 
-        </div>    
+        </div>
+
+        <button id="satelite" class="satelite" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
+            <center class="sateliteicon">
+                <img src="icons/satelite_grey.svg" alt="satelite"
+                 onmouseover="this.src='icons/satelite_green.svg'" 
+                 onmouseout="this.src='icons/satelite_grey.svg'">
+            </center>
+        </button>
         
         <!-- 지도를 표시할 div 입니다 -->
         <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
