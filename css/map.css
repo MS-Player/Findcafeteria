@@ -253,3 +253,9 @@ body {
   box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
   background-color: #fff;
 }
+
+.maptype_button {
+  width: 31.7px;
+  height: 32.8px;
+  background-color: #959595;
+}
