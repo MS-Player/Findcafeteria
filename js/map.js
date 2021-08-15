@@ -427,12 +427,12 @@ var positions = [
 ];
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+var imageSrc = "../icons/spoonandfork_green.svg"; 
     
 for (var i = 0; i < positions.length; i ++) {
     
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(24, 35); 
+    var imageSize = new kakao.maps.Size(64, 64); 
     
     // 마커 이미지를 생성합니다    
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
