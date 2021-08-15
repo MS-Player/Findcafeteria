@@ -307,15 +307,11 @@ function setMapType(maptype) {
     if (maptype === 'roadmap') {
         satelite_grey.style.display = 'block';
         satelite_green.style.display = 'none';
-        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
-        roadmapControl.className = 'selected_btn';
-        skyviewControl.className = 'btn';
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
     } else {
         satelite_grey.style.display = 'none';
         satelite_green.style.display = 'block';
-        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
-        skyviewControl.className = 'selected_btn';
-        roadmapControl.className = 'btn';
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
     }
 }
 
