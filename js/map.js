@@ -318,13 +318,14 @@ function setMapType(maptype) {
 let positions = new Array();
 
 for (let cafeteria of json_data) {
-    console.log(cafeteria.latitude)
-    positions.push(
-        {
-            title: cafeteria.fcltyNm._text,
-            latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
-        }
-    );
+    try {    
+        positions.push(
+            {
+                title: cafeteria.fcltyNm._text,
+                latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
+            }
+        );
+    } catch {}
 };
 
 // 마커 이미지의 이미지 주소입니다
