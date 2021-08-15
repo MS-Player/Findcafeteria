@@ -1,6 +1,6 @@
 {
     "route": "/json_data.json",
-    "allowedRoles": ["anonymous"]
+    "statusCode": 200
 }
     
 "mimeTypes": {
