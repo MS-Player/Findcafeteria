@@ -298,7 +298,7 @@ function setMapType() {
 
 let positions = new Array();
 
-for (let cafeteria of json_data) {
+for (let cafeteria of json_data.json) {
     try {    
         positions.push(
             {
