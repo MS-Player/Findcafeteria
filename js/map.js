@@ -302,7 +302,11 @@ for (let cafeteria of json_data) {
     try {    
         positions.push(
             {
-                content: cafeteria.fcltyNm._text,
+                fcltyNm: cafeteria.fcltyNm._text,
+                rdnmadr: cafeteria.rdnmadr._text,
+                mlsvTrget: cafeteria.mlsvTrget._text,
+                mlsvTime: cafeteria.mlsvTime._text,
+                phoneNumber: cafeteria.phoneNumber._text,
                 latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
             }
         );
@@ -337,11 +341,11 @@ function displayMarker(positions) {
     kakao.maps.event.addListener(marker, 'click', function () {
         cafeteria_list_box.style.display = "block";
 
-        document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
-        document.getElementById('cafeteria_address').innerText = position.rdnmadr._text;
-        document.getElementById('target_person').innerText = position.mlsvTrget._text;
-        document.getElementById('time').innerText = position.mlsvTime._text;
-        document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber._text;
+        document.getElementById('cafeteria_name').innerText = position.fcltyNm;
+        document.getElementById('cafeteria_address').innerText = position.rdnmadr;
+        document.getElementById('target_person').innerText = position.mlsvTrget;
+        document.getElementById('time').innerText = position.mlsvTime;
+        document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber;
     });
 }
 
