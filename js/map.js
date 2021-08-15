@@ -325,12 +325,12 @@ for (let cafeteria of positions) {
 
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
-        clickable: true, // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
         map: map, // 마커를 표시할 지도
         position: cafeteria.latlng, // 마커를 표시할 위치
         title : cafeteria.title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image : markerImage // 마커 이미지
     });
+    marker.setClickable(true);
 
     // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
     var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
