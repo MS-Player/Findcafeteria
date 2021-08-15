@@ -345,10 +345,10 @@ function displayMarker(positions) {
         document.getElementsByClassName('cafeteria_address')[0].innerText = positions.rdnmadr;
         document.getElementsByClassName('target_person')[0].innerText = positions.mlsvTrget;
         document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
-        document.getElementsByClassName('day_of_the_week')[0].href = "tel:" + positions.phoneNumber;
+        document.getElementsByClassName('day_of_the_week')[0].innerText = "tel:" + positions.phoneNumber;
     });
 }
 
 function close_cafeteria_list_box() {
-    document.getElementById('cafeteria_list_box').style.display = "none";
+    document.getElementsByClassName('cafeteria_list_box')[0].style.display = "none";
 }
