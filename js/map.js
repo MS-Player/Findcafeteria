@@ -341,7 +341,17 @@ for (var i = 0; i < positions.length; i ++) {
     removable : iwRemoveable
     });
 
-    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
-      infowindow.open(map, marker)
-  });
+    var array = [infowindow, infowindow2];
+
+    function closeInfoWindow() {
+        for(var idx=0; idx<array.length; idx++){
+            array[idx].close();
+        }
+    }
+    
+    kakao.maps.event.addListener(marker, 'click', function() {
+        closeInfoWindow();
+        infowindow.open(map, marker); //인포윈도우 열기
+        setCenter();
+    });
 }
