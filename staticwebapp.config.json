@@ -1,3 +1,8 @@
+ {
+    "route": "/json_data.json",
+    "allowedRoles": ["authenticated"]
+ },
+
 "mimeTypes": {
    ".json": "text/json"
   }
