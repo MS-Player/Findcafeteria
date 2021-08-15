@@ -331,28 +331,40 @@ for (var i = 0; i < positions.length; i ++) {
         image : markerImage // 마커 이미지 
     });
     
-    // 마커에 표시할 인포윈도우를 생성합니다 
-    var infowindow = new kakao.maps.InfoWindow({
-        content: positions[i].content // 인포윈도우에 표시할 내용
+    var content = '<div class="wrap">' + 
+                '    <div class="info">' + 
+                '        <div class="title">' + 
+                '            서울역' + 
+                '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
+                '        </div>' + 
+                '        <div class="body">' + 
+                '            <div class="img">' +
+                '                <img src="https://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
+                '           </div>' + 
+                '            <div class="desc">' + 
+                '                <div class="ellipsis">서울특별시 용산구 동자동 43-205</div>' + 
+                '                <div class="jibun ellipsis"> 서울역은 서울특별시 용산구와 중구에 </div>' + 
+                '                <div class="jibun ellipsis"> 위치한 민자역사 철도역이다. </div>' + 
+                '            </div>' + 
+                '        </div>' + 
+                '    </div>' +    
+                '</div>';
+
+    // 마커 위에 커스텀오버레이를 표시합니다
+    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    var overlay = new kakao.maps.CustomOverlay({
+        content: content,
+        map: map,
+        position: marker.getPosition()       
     });
-    
-    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-    }
 
-    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
-    function makeOverListener(map, marker, infowindow) {
-    return function() {
-        infowindow.open(map, marker);
-    };
-    }
-
-    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-    function makeOutListener(infowindow) {
-    return function() {
-        infowindow.close();
-    };
+    // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    kakao.maps.event.addListener(marker, 'click', function() {
+        overlay.setMap(map);
+    });
+        
+    // 맵을 클릭했을 때 커스텀 오버레이를 닫습니다.
+    kakao.maps.event.addListener(map, 'click', function() {
+        overlay.setMap(null);
+    });
 }
