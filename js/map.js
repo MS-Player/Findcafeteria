@@ -327,7 +327,7 @@ for (let cafeteria of json_data) {
     try {    
         positions.push(
             {
-                contact:
+                contact: <div>cafeteria.fcitynm._text</div>
                 latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
             }
         );
