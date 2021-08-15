@@ -342,7 +342,5 @@ for (let cafeteria of positions) {
         removable : iwRemoveable
     });
 
-    kakao.maps.event.addListener(map, 'click', function() {        
-        infowindow.open(map, marker);
-    });
+    kakao.maps.event.addListener(marker, 'click', infowindow);
 };
