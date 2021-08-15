@@ -346,7 +346,6 @@ for (var i = 0; i < positions.length; i ++) {
                 '                <span class="time">11:30 ~ 12:30</span><br>' + 
                 '                <span class="day_of_the_week">(월, 화, 수, 목, 금)</span>' + 
                 '           </div>' + 
-                '                <a class="call" href='tel:010-0000-0000'>' + 
                 '       <div style="display: flex; align-items: center; justify-content: center;">' + 
                 '    </div>' +    
                 '    </a>' +  
