@@ -331,41 +331,17 @@ for (var i = 0; i < positions.length; i ++) {
         image : markerImage // 마커 이미지 
     });
 
-    var content = '<div class="cafeteria_list_box" style="position:fixed; z-index: 3; display: flex; display: block;">' + 
-    '    <span class="cafeteria_name">아현노인복지센터</span><button class="cafeteria_x_button"><img src="icons/cancel_grey.svg" alt="cancel"></button>' + 
-    '        <br>' + 
-    '            <span class="cafeteria_address">서울특별시 마포구 마포대로26길 19</span><br><br>' + 
-    '            <span class="topic_txt">지급대상</span><br>' + 
-    '            <span class="target_person">수급자, 차상위, 기타저소득</span><br><br>' + 
-    '        <span class="topic_txt">영업시간</span><br>' + 
-    '            <div style="display: flex;">' +
-    '                <img src="https://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
-    '           </div>' + 
-    '            <div>' + 
-    '                <span class="time">11:30 ~ 12:30</span><br>' + 
-    '                <span class="day_of_the_week">(월, 화, 수, 목, 금)</span>' + 
-    '           </div>' + 
-    '       <div style="display: flex; align-items: center; justify-content: center;">' + 
-    '    </div>' +    
-    '    </a>' +  
-    '    </div>' +  
-    '    </div>';
+    // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+    var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 
-// 마커 위에 커스텀오버레이를 표시합니다
-// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-var overlay = new kakao.maps.CustomOverlay({
-content: content,
-map: map,
-position: marker.getPosition()       
-});
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+    content : iwContent,
+    removable : iwRemoveable
+    });
 
-// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-kakao.maps.event.addListener(marker, 'click', function() {
-overlay.setMap(map);
-});
-
-// 맵을 클릭했을 때 커스텀 오버레이를 닫습니다.
-kakao.maps.event.addListener(map, 'click', function() {
-overlay.setMap(null);
-});
+    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+      infowindow.open(map, marker)
+  });
 }
