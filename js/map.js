@@ -11,9 +11,6 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 // 장소 검색 객체를 생성합니다
 var ps = new kakao.maps.services.Places();
 
-// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
-var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-
 // 내 위치 마커 START
 function locationLoadSuccess(pos){
     // 현재 위치 받아오기
@@ -314,35 +311,40 @@ for (let cafeteria of json_data) {
 
 // 마커 이미지의 이미지 주소입니다
 var imageSrc = "../icons/pin_notenadbled.svg"; 
-
-for (let cafeteria of positions) {
-
+    
+for (var i = 0; i < positions.length; i ++) {
+    
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(128, 128);
-
-    // 마커 이미지를 생성합니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
+    var imageSize = new kakao.maps.Size(128, 128); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+    
     // 마커를 생성합니다
+    displayMarker(positions[i]);
+}
+
+function displayMarker(positions) {
     var marker = new kakao.maps.Marker({
-        clickable: true, // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
-        map: map, // 마커를 표시할 지도
-        position: cafeteria.latlng, // 마커를 표시할 위치
-        title : cafeteria.title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지
+        map: map,
+        position: positions.latlng, // 마커를 표시할 위치
+        // title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage, // 마커 이미지 
+        // clickable: true
     });
 
-    // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-    var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+    // 마커에 클릭이벤트를 등록합니다
+    kakao.maps.event.addListener(marker, 'click', function () {
+        document.getElementById('cafeteria_list_box').style.display = "block";
 
-    // 인포윈도우를 생성합니다
-    var infowindow = new kakao.maps.InfoWindow({
-        content : iwContent,
-        removable : iwRemoveable
+        document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
+        document.getElementById('cafeteria_address').innerText = position.rdnmadr._text;
+        document.getElementById('target_person').innerText = position.mlsvTrget._text;
+        document.getElementById('time').innerText = position.mlsvTime._text;
+        document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber._text;
     });
+}
 
-    kakao.maps.event.addListener(map, 'click', function() {        
-        infowindow.open(map, marker)
-    })
-};
+function close_cafeteria_list_box {
+    document.getElementById('cafeteria_list_box').style.display = "none";
+}
