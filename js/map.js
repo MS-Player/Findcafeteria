@@ -330,28 +330,4 @@ for (var i = 0; i < positions.length; i ++) {
         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image : markerImage // 마커 이미지 
     });
-
-    // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-    var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
-
-    // 인포윈도우를 생성합니다
-    var infowindow = new kakao.maps.InfoWindow({
-    content : iwContent,
-    removable : iwRemoveable
-    });
-
-    var array = [infowindow, infowindow2];
-
-    function closeInfoWindow() {
-        for(var idx=0; idx<array.length; idx++){
-            array[idx].close();
-        }
-    }
-    
-    kakao.maps.event.addListener(marker, 'click', function() {
-        closeInfoWindow();
-        infowindow.open(map, marker); //인포윈도우 열기
-        setCenter();
-    });
-}
+  }
