@@ -77,22 +77,8 @@
             </button>
             
         </div>
-        
-        <div class="map_type" style="position: absolute; z-index: 2;">
-            
-            <button class="zoom_button" onclick="setMapType('roadmap')">
-                <img src="icons/Icon feather-plus.svg" alt="In">
-            </button>
-            
-            <div class="zoom_bar"></div>
-            
-            <button class="zoom_button" style="height: 25px;" onclick="setMapType('skyview')">
-                <img src="icons/Icon feather-minus.svg" alt="Out">
-            </button>
 
-        </div>
-
-        <button id="satelite" class="satelite" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
+        <button id="satelite" class="satelite" style="position: absolute; z-index: 2;" onclick="setMapType('skyview')">
             <center class="sateliteicon">
                 <img src="icons/satelite_grey.svg" alt="satelite_grey" id="satelite_grey" style="display: block;">
                 <img src="icons/satelite_green.svg" alt="satelite_green" id="satelite_green" style="display: none;">
