@@ -1,5 +1,5 @@
 {
-    route": "/json_data.json",
+    "route": "/json_data.json",
     "allowedRoles": ["anonymous"]
 }
     
