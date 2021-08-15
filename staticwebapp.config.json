@@ -1,9 +1,5 @@
 {
   "routes": [
-    {
-      "route": "/",
-      "allowedRoles": ["contributor"]
-    },
       {
       "route": "/json_data.json",
       "allowedRoles": ["contributor"]
