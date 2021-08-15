@@ -299,19 +299,23 @@ function searchPlaces() {
 }
 
 // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-function setMapType() { 
+function setMapType(maptype) { 
+    var roadmapControl = document.getElementById('btnRoadmap');
+    var skyviewControl = document.getElementById('btnSkyview');
     const satelite_grey = document.getElementById('satelite_grey');
     const satelite_green = document.getElementById('satelite_green');
-    if (satelite_grey.style.display === 'none') {
-        // 지도뷰
+    if (maptype === 'roadmap') {
         satelite_grey.style.display = 'block';
         satelite_green.style.display = 'none';
-        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+        roadmapControl.className = 'selected_btn';
+        skyviewControl.className = 'btn';
     } else {
-        // 위성뷰
         satelite_grey.style.display = 'none';
         satelite_green.style.display = 'block';
-        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+        skyviewControl.className = 'selected_btn';
+        roadmapControl.className = 'btn';
     }
 }
 
@@ -357,8 +361,8 @@ for (var i = 0; i < positions.length; i ++) {
     // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
     // 이벤트 리스너로는 클로저를 만들어 등록합니다 
     // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+    kakao.maps.event.addListener(marker, 'click', makeOutListener(infowindow));
     }
 
     // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
