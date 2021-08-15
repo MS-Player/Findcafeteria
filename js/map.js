@@ -340,9 +340,8 @@ for (var i = 0; i < positions.length; i ++) {
     var infowindow = new kakao.maps.InfoWindow({
     content : iwContent,
     removable : iwRemoveable
-});
+})};
 
-    kakao.maps.event.addListener(map, 'click', function(iwContent) {        
-      infowindow.open(map, marker)
-  });
-}
+kakao.maps.event.addListener(map, 'click', function(iwContent) {        
+    infowindow.open(map, marker)
+});
