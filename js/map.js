@@ -318,7 +318,7 @@ function setMapType(maptype) {
 let positions = new Array();
 
 for (let cafeteria of json_data) {
-    console.log(cafeteria.latitude._text)
+    console.log(cafeteria)
     positions.push({title: cafeteria.fcltyNm._text, latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))});
 };
 
