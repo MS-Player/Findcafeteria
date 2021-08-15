@@ -1,7 +1,3 @@
-{
-    "route": "/json_data.json",
-}
-    
-"mimeTypes": {
-  ".json": "text/json"
-}
+  "mimeTypes": {
+    "json_data.json": "text/json"
+  }
