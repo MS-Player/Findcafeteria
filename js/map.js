@@ -370,4 +370,5 @@ for (var i = 0; i < positions.length; i ++) {
      position: position,
      content: content,
      yAnchor: 1
-    }};
+    })
+};
