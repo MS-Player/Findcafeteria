@@ -329,12 +329,12 @@ for (let cafeteria of json_data) {
 };
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "../icons/spoonandfork_green.svg"; 
+var imageSrc = "../icons/pin_notenadbled.svg"; 
     
 for (var i = 0; i < positions.length; i ++) {
     
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(64, 64); 
+    var imageSize = new kakao.maps.Size(128, 128); 
     
     // 마커 이미지를 생성합니다    
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
