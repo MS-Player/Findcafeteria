@@ -245,3 +245,11 @@ body {
     background-color: #148300
 }
   
+.map_type  {
+  width: 61px;
+  height: 60px;
+  margin: 54px 265px 31px 0;
+  padding: 12.6px 14.7px 14.6px;
+  box-shadow: 5px 5px 20px 0 rgba(101, 101, 101, 0.16);
+  background-color: #fff;
+}
