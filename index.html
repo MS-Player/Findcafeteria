@@ -1,8 +1,18 @@
 <html>
     <head>
-        <title>무료 급식소 찾기</title>
+        <title>전국 무료 급식소 찾기</title>
+        <meta charset="utf-8"/>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-
+        <meta name="author" content="MS Player">
+        <meta name="description" content="찾고 연락하고 찾아가고, 전국 무료 급식소 찾기">
+        
+        <meta property="og:image" content="https://user-images.githubusercontent.com/41516228/129473785-43b1d69d-f2ad-414a-a52e-56df6490e5fb.png">
+        <meta property="og:description" content="찾고 연락하고 찾아가고, 전국 무료 급식소 찾기">
+        <meta property="og:title" content="전국 무료 급식소 찾기">
+        
+        <link rel="shortcut icon" href="icons/favicon.ico">
+        <link rel="icon" href="icons/favicon.ico">
+        
         <link rel="stylesheet" href="css/map.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
 
@@ -90,7 +100,7 @@
         
         <!-- 지도를 표시할 div 입니다 -->
         <div id="map" style="height: 100%; width: 100%; position: relative; z-index: 1;"></div>
-        <script type="text/javascript" src="json_data.json"></script>
+        <script type="text/json" src="json_data.json"></script>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e58d2ef781fe0fa2dc40f1e1548213b5&libraries=services,clusterer,drawing"></script>
         <script type="text/javascript" src="js/map.js"></script>
     </body>
