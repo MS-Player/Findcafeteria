@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121" height="120" viewBox="0 0 121 120">
+  <defs>
+    <filter id="타원_1" x="0" y="0" width="121" height="120" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#656565" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_36" data-name="그룹 36" transform="translate(4 -155)">
+    <g transform="matrix(1, 0, 0, 1, -4, 155)" filter="url(#타원_1)">
+      <ellipse id="타원_1-2" data-name="타원 1" cx="30.5" cy="30" rx="30.5" ry="30" transform="translate(25 25)" fill="#fff"/>
+    </g>
+    <path id="Icon_awesome-satellite-dish" data-name="Icon awesome-satellite-dish" d="M11.685,22.151l1.7-1.755a1.757,1.757,0,0,0,.483.1,2.05,2.05,0,1,0-1.981-2.049,1.93,1.93,0,0,0,.1.5l-1.7,1.755-7.229-7.48a.963.963,0,0,0-1.547.192A13.492,13.492,0,0,0,3.72,28.933a12.391,12.391,0,0,0,15,2.286,1.029,1.029,0,0,0,.186-1.6ZM12.935,0a1.011,1.011,0,0,0-1.052,1.025V3.048a1,1,0,0,0,.928,1.018c8.009.448,14.445,7.172,14.91,15.466a1,1,0,0,0,.984.961h1.987a1.016,1.016,0,0,0,.99-1.089C31.156,8.953,23.036.551,12.935,0Zm.019,6.148a1.013,1.013,0,0,0-1.071,1.031V9.234a1.007,1.007,0,0,0,.916,1.018,10.062,10.062,0,0,1,8.968,9.3,1.009,1.009,0,0,0,.984.941h1.993a1.023,1.023,0,0,0,1-1.108A14.174,14.174,0,0,0,12.954,6.148Z" transform="translate(35.658 192.61)" fill="#959595"/>
+  </g>
+</svg>
