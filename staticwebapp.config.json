@@ -1,6 +1,5 @@
 {
     "route": "/json_data.json",
-    "statusCode": 200
 }
     
 "mimeTypes": {
