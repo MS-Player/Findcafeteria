@@ -307,11 +307,15 @@ function setMapType(maptype) {
     if (maptype === 'roadmap') {
         satelite_grey.style.display = 'block';
         satelite_green.style.display = 'none';
-        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+        roadmapControl.className = 'selected_btn';
+        skyviewControl.className = 'btn';
     } else {
         satelite_grey.style.display = 'none';
         satelite_green.style.display = 'block';
-        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+        skyviewControl.className = 'selected_btn';
+        roadmapControl.className = 'btn';
     }
 }
 
@@ -343,9 +347,10 @@ for (var i = 0; i < positions.length; i ++) {
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
-        position: Position[i].latlng, // 마커를 표시할 위치
+        position: markerPosition[i].latlng, // 마커를 표시할 위치
         image : markerImage // 마커 이미지 
     });
+  }
 
     // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
     var content = '<div class="customoverlay">' +
@@ -364,4 +369,3 @@ for (var i = 0; i < positions.length; i ++) {
       content: content,
       yAnchor: 1 
     });
-  }
