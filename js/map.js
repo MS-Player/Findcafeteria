@@ -306,6 +306,7 @@ for (let cafeteria of json_data) {
                 rdnmadr: cafeteria.rdnmadr._text,
                 mlsvTrget: cafeteria.mlsvTrget._text,
                 mlsvTime: cafeteria.mlsvTime._text,
+                mlsvDate = cafeteria.mlsvDate._text,
                 phoneNumber: cafeteria.phoneNumber._text,
                 latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
             }
