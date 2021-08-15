@@ -306,7 +306,7 @@ for (let cafeteria of json_data) {
                 rdnmadr: cafeteria.rdnmadr._text,
                 mlsvTrget: cafeteria.mlsvTrget._text,
                 mlsvTime: cafeteria.mlsvTime._text,
-                mlsvDate = cafeteria.mlsvDate._text,
+                mlsvDate: cafeteria.mlsvDate._text,
                 phoneNumber: cafeteria.phoneNumber._text,
                 latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
             }
@@ -346,6 +346,7 @@ function displayMarker(positions) {
         document.getElementsByClassName('cafeteria_address')[0].innerText = positions.rdnmadr;
         document.getElementsByClassName('target_person')[0].innerText = positions.mlsvTrget;
         document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
+        document.getElementsByClassName('day_of_the_week')[0].innerText = positions.mlsvDate;
         document.getElementsByClassName('call')[0].innerText = "tel:" + positions.phoneNumber;
     });
 }
