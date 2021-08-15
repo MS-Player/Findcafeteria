@@ -302,7 +302,11 @@ for (let cafeteria of json_data) {
     try {    
         positions.push(
             {
-                content: cafeteria.fcltyNm._text,
+                fcltyNm: cafeteria.fcltyNm._text,
+                rdnmadr: cafeteria.rdnmadr._text,
+                mlsvTrget: cafeteria.mlsvTrget._text,
+                mlsvTime: cafeteria.mlsvTime._text,
+                phoneNumber: cafeteria.phoneNumber._text,
                 latlng: new kakao.maps.LatLng(Number(cafeteria.latitude._text), Number(cafeteria.longitude._text))
             }
         );
@@ -347,17 +351,17 @@ function displayMarker(positions) {
         let lists = document.createElement("div")
         const obj = document.getElementById("cafeteria_box");
         lists.innerHTML = '<div class="cafeteria_list_box">'+
-            '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
-            '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
+            '   <span class="cafeteria_name">'+ cafeteria.fcltyNm +'</span><br>'+
+            '   <span class="cafeteria_address">' + cafeteria.rdnmadr + '</span><br><br>'+
             '   <span class="topic_txt">지급대상</span><br>'+
-            '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
+            '   <span class="target_person">' + cafeteria.mlsvTrget + '</span><br><br>'+
             '   <span class="topic_txt">영업시간</span><br>'+
             '   <div style="display: flex;">'+
             '       <div>'+
-            '           <span class="time">' + cafeteria.mlsvTime._text + '</span><br>'+
-            '           <span class="day_of_the_week">' + cafeteria.mlsvDate._text + '</span>'+
+            '           <span class="time">' + cafeteria.mlsvTime + '</span><br>'+
+            '           <span class="day_of_the_week">' + cafeteria.mlsvDate + '</span>'+
             '       </div>'+
-            '       <a class="call" href="tel:' + cafeteria.phoneNumber._text + '">'+
+            '       <a class="call" href="tel:' + cafeteria.phoneNumber + '">'+
             '           <div style="display: flex; align-items: center; justify-content: center;">'+
             '               <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
             '           </div>'+
