@@ -311,7 +311,7 @@ for (let cafeteria of json_data) {
 
 // 마커 이미지의 이미지 주소입니다
 var imageSrc = "../icons/pin_notenadbled.svg"; 
-    
+var cafeteria_list_box = document.getElementById('cafeteria_list_box')
 for (var i = 0; i < positions.length; i ++) {
     
     // 마커 이미지의 이미지 크기 입니다
@@ -335,7 +335,7 @@ function displayMarker(positions) {
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function () {
-        document.getElementById('cafeteria_list_box').style.display = "block";
+        cafeteria_list_box.style.display = "block";
 
         document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
         document.getElementById('cafeteria_address').innerText = position.rdnmadr._text;
