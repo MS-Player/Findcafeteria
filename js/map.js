@@ -348,6 +348,9 @@ function displayMarker(positions) {
         document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
         document.getElementsByClassName('day_of_the_week')[0].innerText = positions.mlsvDate;
         document.getElementsByClassName('call')[0].href = "tel:" + positions.phoneNumber;
+        if(positions.phoneNumber == undefined) {
+            alert('해당 급식소의 전화번호가 없습니다.');
+        }
     });
 }
 
