@@ -155,9 +155,12 @@ body {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin: 0 0 0 80px;
     border: 0px solid;
     background-color: #fff;
+    text-align:right;
+    text-decoration: none;
+    float: right;
+    color: rgb(160, 160, 160);
 }
 
 .cafeteria_name {
