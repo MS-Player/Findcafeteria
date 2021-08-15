@@ -157,6 +157,7 @@ body {
     cursor: pointer;
     margin: 0 0 0 80px;
     border: 0px solid;
+    background-color: #fff;
 }
 
 .cafeteria_name {
