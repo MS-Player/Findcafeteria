@@ -305,14 +305,14 @@ function setMapType(maptype) {
     const satelite_grey = document.getElementById('satelite_grey');
     const satelite_green = document.getElementById('satelite_green');
     if (maptype === 'roadmap') {
-        satelite_grey.style.display = 'none';
-        satelite_green.style.display = 'block';
+        satelite_grey.style.display = 'block';
+        satelite_green.style.display = 'none';
         map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
         roadmapControl.className = 'selected_btn';
         skyviewControl.className = 'btn';
     } else {
-        satelite_grey.style.display = 'block';
-        satelite_green.style.display = 'none';
+        satelite_grey.style.display = 'none';
+        satelite_green.style.display = 'block';
         map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
         skyviewControl.className = 'selected_btn';
         roadmapControl.className = 'btn';
