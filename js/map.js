@@ -347,23 +347,27 @@ for (var i = 0; i < positions.length; i ++) {
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
-        position: positions[i].latlng, // 마커를 표시할 위치
+        position: markerPosition[i].latlng, // 마커를 표시할 위치
         image : markerImage // 마커 이미지 
-        // clickable: true
     });
+    
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);  
 
-    // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-    var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    var content = '<div class="customoverlay">' +
+        '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
+        '    <span class="title">구의야구공원</span>' +
+        '  </a>' +
+        '</div>';
 
-    // 인포윈도우를 생성합니다
-    var infowindow = new kakao.maps.InfoWindow({
-    content : iwContent,
-    removable : iwRemoveable
-});
+    // 커스텀 오버레이가 표시될 위치입니다 
+    var position = new kakao.maps.LatLng(37.54699, 127.09598);  
 
-    // 마커에 클릭이벤트를 등록합니다
-    kakao.maps.event.addListener(marker, 'click', function() {
-      // 마커 위에 인포윈도우를 표시합니다
-      infowindow.open(map, marker);  
+    // 커스텀 오버레이를 생성합니다
+    var customOverlay = new kakao.maps.CustomOverlay({
+     map: map,
+     position: position,
+     content: content,
+     yAnchor: 1 
 });
