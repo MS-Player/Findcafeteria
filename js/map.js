@@ -314,21 +314,21 @@ for (let cafeteria of json_data) {
 
 // 마커 이미지의 이미지 주소입니다
 var imageSrc = "../icons/pin_notenadbled.svg"; 
-    
+
 for (var i = 0; i < positions.length; i ++) {
-    
+
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(128, 128); 
-    
-    // 마커 이미지를 생성합니다    
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-    
+    var imageSize = new kakao.maps.Size(128, 128);
+
+    // 마커 이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
-        position: positions[i].latlng, // 마커를 표시할 위치
-        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage, // 마커 이미지 
+        //position: positions[i].latlng, // 마커를 표시할 위치
+        //title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage, // 마커 이미지
         clickable: true
     });
 
@@ -344,7 +344,7 @@ for (var i = 0; i < positions.length; i ++) {
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
-      // 마커 위에 인포윈도우를 표시합니다
-      infowindow.open(map, marker);  
-});
+        // 마커 위에 인포윈도우를 표시합니다
+        infowindow.open(map, marker);
+    });
 }
