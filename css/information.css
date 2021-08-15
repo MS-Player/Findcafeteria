@@ -8,11 +8,14 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration-line: none;
+}
+
 .background {
     display: flex;
     justify-content: center;
     padding: 61px 40px 39px;
-    text-decoration-line: none;
 }
 
 .FindCafeteria {
