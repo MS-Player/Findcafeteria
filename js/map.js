@@ -299,23 +299,19 @@ function searchPlaces() {
 }
 
 // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-function setMapType(maptype) { 
-    var roadmapControl = document.getElementById('btnRoadmap');
-    var skyviewControl = document.getElementById('btnSkyview');
+function setMapType() { 
     const satelite_grey = document.getElementById('satelite_grey');
     const satelite_green = document.getElementById('satelite_green');
-    if (maptype === 'roadmap') {
+    if (satelite_grey.style.display === 'none') {
+        // 지도뷰
         satelite_grey.style.display = 'block';
         satelite_green.style.display = 'none';
-        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
-        roadmapControl.className = 'selected_btn';
-        skyviewControl.className = 'btn';
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
     } else {
+        // 위성뷰
         satelite_grey.style.display = 'none';
         satelite_green.style.display = 'block';
-        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
-        skyviewControl.className = 'selected_btn';
-        roadmapControl.className = 'btn';
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
     }
 }
 
