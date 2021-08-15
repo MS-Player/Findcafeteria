@@ -335,16 +335,39 @@ function displayMarker(positions) {
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function () {
-        cafeteria_list_box.style.display = "block";
+        //cafeteria_list_box.style.display = "block";
 
-        document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
-        document.getElementById('cafeteria_address').innerText = position.rdnmadr._text;
-        document.getElementById('target_person').innerText = position.mlsvTrget._text;
-        document.getElementById('time').innerText = position.mlsvTime._text;
-        document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber._text;
+        //document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
+        //document.getElementById('cafeteria_address').innerText = position.rdnmadr._text;
+        //document.getElementById('target_person').innerText = position.mlsvTrget._text;
+        //document.getElementById('time').innerText = position.mlsvTime._text;
+        //document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber._text;
+
+        //cafeteria_box
+        let lists = document.createElement("div")
+        const obj = document.getElementById("cafeteria_box");
+        lists.innerHTML = '<div class="cafeteria_list_box">'+
+            '   <span class="cafeteria_name">'+ cafeteria.fcltyNm._text +'</span><br>'+
+            '   <span class="cafeteria_address">' + cafeteria.rdnmadr._text + '</span><br><br>'+
+            '   <span class="topic_txt">지급대상</span><br>'+
+            '   <span class="target_person">' + cafeteria.mlsvTrget._text + '</span><br><br>'+
+            '   <span class="topic_txt">영업시간</span><br>'+
+            '   <div style="display: flex;">'+
+            '       <div>'+
+            '           <span class="time">' + cafeteria.mlsvTime._text + '</span><br>'+
+            '           <span class="day_of_the_week">' + cafeteria.mlsvDate._text + '</span>'+
+            '       </div>'+
+            '       <a class="call" href="tel:' + cafeteria.phoneNumber._text + '">'+
+            '           <div style="display: flex; align-items: center; justify-content: center;">'+
+            '               <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>'+
+            '           </div>'+
+            '       </a>'+
+            '   </div>'+
+            '</div>'
+        obj.appendChild(lists);
     });
 }
 
 function close_cafeteria_list_box() {
-    document.getElementById('cafeteria_list_box').style.display = "none";
+    document.getElementById('cafeteria_box').style.display = "none";
 }
