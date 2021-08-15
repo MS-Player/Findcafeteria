@@ -351,9 +351,6 @@ for (var i = 0; i < positions.length; i ++) {
         image : markerImage // 마커 이미지 
         // clickable: true
     });
-    
-    // 마커를 지도에 표시합니다.
-    marker.setMap(map);
 
     // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
     var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
