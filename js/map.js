@@ -369,5 +369,5 @@ for (var i = 0; i < positions.length; i ++) {
      map: map,
      position: position,
      content: content,
-     yAnchor: 1 
-});
+     yAnchor: 1
+    }};
