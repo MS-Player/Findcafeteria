@@ -347,7 +347,7 @@ function displayMarker(positions) {
         document.getElementsByClassName('target_person')[0].innerText = positions.mlsvTrget;
         document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
         document.getElementsByClassName('day_of_the_week')[0].innerText = positions.mlsvDate;
-        document.getElementsByClassName('call')[0].innerText = "tel:" + positions.phoneNumber;
+        document.getElementsByClassName('call')[0].href = "tel:" + positions.phoneNumber;
     });
 }
 
