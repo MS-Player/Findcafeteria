@@ -245,7 +245,7 @@ body {
     background-color: #148300
 }
 
-.compass {
+.satelite {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,6 +260,6 @@ body {
     cursor: pointer;
 }
 
-.compassicon {
+.sateliteicon {
     padding: 3.2px;
 }
