@@ -14,27 +14,6 @@ body {
     padding: 61px 40px 39px;
 }
 
-.search {
-    width: 387px;
-    height: 53px;
-    padding: 20px;
-    border-radius: 31px;
-    border: 3px solid #ffffff;
-    box-shadow: 5px 5px 20px 0 rgba(105, 105, 105, 0.5);
-    font-family: GmarketSansTTF, FontAwesome;
-    font-style: normal;
-    text-decoration: inherit;
-    background-color: #ffffff;
-    color: #717171;
-    text-align: left;
-    margin: 30px 20px 0;
-    font-size: 17px;
-    font-weight: 500;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-}
-
 .Bottombar {
     width: 350px;
     bottom: 30px;
