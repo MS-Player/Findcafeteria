@@ -339,13 +339,13 @@ function displayMarker(positions) {
 
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function () {
-        cafeteria_list_box.style.display = "block";
+        document.getElementsByClassName('cafeteria_list_box')[0].style.display = "block";
 
-        document.getElementById('cafeteria_name').innerText = position.fcltyNm;
-        document.getElementById('cafeteria_address').innerText = position.rdnmadr;
-        document.getElementById('target_person').innerText = position.mlsvTrget;
-        document.getElementById('time').innerText = position.mlsvTime;
-        document.getElementById('day_of_the_week').href = "tel:" + position.phoneNumber;
+        document.getElementsByClassName('cafeteria_name')[0].innerText = positions.fcltyNm;
+        document.getElementsByClassName('cafeteria_address')[0].innerText = positions.rdnmadr;
+        document.getElementsByClassName('target_person')[0].innerText = positions.mlsvTrget;
+        document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
+        document.getElementsByClassName('day_of_the_week')[0].href = "tel:" + positions.phoneNumber;
     });
 }
 

@@ -37,7 +37,7 @@ function list_result() {
                 // 리스트 처리
                 for (let cafeteria of longitude_ok) {   
                     let lists = document.createElement("div")
-                    const obj = document.getElementById("cafeteria_list");             
+                    const obj = document.getElementById("cafeteria_list");
                     lists.innerHTML = '<div class="cafeteria_list_box">'+
                         '   <span class="cafeteria_name" value="' + cafeteria.latitude._text + '">'+ cafeteria.fcltyNm._text +'</span><br>'+
                         '   <span class="cafeteria_address" value="' + cafeteria.longitude._text + '">' + cafeteria.rdnmadr._text + '</span><br><br>'+
