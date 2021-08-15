@@ -349,7 +349,7 @@ for (var i = 0; i < positions.length; i ++) {
         map: map, // 마커를 표시할 지도
         position: positions[i].latlng, // 마커를 표시할 위치
         image : markerImage // 마커 이미지 
-        // clickable: true
+        clickable: true
     });
     
     // 마커에 클릭이벤트를 등록합니다
