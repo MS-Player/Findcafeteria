@@ -329,7 +329,7 @@ for (let cafeteria of json_data) {
 };
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "../icons/spoonandfork_green.svg"; 
+var imageSrc = "../icons/pin_notenadbled.svg"; 
     
 for (var i = 0; i < positions.length; i ++) {
     
