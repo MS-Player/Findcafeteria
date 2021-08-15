@@ -345,7 +345,7 @@ function displayMarker(positions) {
         document.getElementsByClassName('cafeteria_address')[0].innerText = positions.rdnmadr;
         document.getElementsByClassName('target_person')[0].innerText = positions.mlsvTrget;
         document.getElementsByClassName('time')[0].innerText = positions.mlsvTime;
-        document.getElementsByClassName('day_of_the_week')[0].innerText = "tel:" + positions.phoneNumber;
+        document.getElementsByClassName('call')[0].innerText = "tel:" + positions.phoneNumber;
     });
 }
 
