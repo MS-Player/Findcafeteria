@@ -345,6 +345,6 @@ function displayMarker(positions) {
     });
 }
 
-function close_cafeteria_list_box {
+function close_cafeteria_list_box() {
     document.getElementById('cafeteria_list_box').style.display = "none";
 }
