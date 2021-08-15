@@ -245,7 +245,7 @@ function zoomOut() {
     map.setLevel(level + 1);
     
     // 지도 레벨을 표시합니다
-    displayLevel(); 
+    displayLevel();
 }
 
 // 키워드 검색을 요청하는 함수입니다
