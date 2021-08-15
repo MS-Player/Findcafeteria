@@ -1,3 +1,22 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "allowedRoles": ["contributor"]
+    },
+      {
+      "route": "/json_data.json",
+      "allowedRoles": ["contributor"]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+  },
+  "globalHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
   "mimeTypes": {
-    "json_data.json": "text/json"
+    ".json": "text/json"
   }
+}
