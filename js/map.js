@@ -334,7 +334,7 @@ function displayMarker(positions) {
     });
 
     // 마커에 클릭이벤트를 등록합니다
-    kakao.maps.event.addListener(marker, 'click', function (cafeteria_list_box) {
+    kakao.maps.event.addListener(marker, 'click', function () {
         cafeteria_list_box.style.display = "block";
 
         document.getElementById('cafeteria_name').innerText = position.fcltyNm._text;
