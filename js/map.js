@@ -251,21 +251,32 @@ function zoomOut() {
 // 키워드 검색을 요청하는 함수입니다
 function searchPlaces() {
     
-    var keyword = document.getElementsByClassName('search')[0].value;
+    // var keyword = document.getElementsByClassName('search')[0].value;
     
-    if (!keyword.replace(/^\s+|\s+$/g, '')) {
-        alert('키워드를 입력해주세요!');
-        return false;
-    }
+    // if (!keyword.replace(/^\s+|\s+$/g, '')) {
+    //     alert('키워드를 입력해주세요!');
+    //     return false;
+    // }
     
-    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-    ps.keywordSearch(keyword, placesSearchCB); 
+    // // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+    // ps.keywordSearch(keyword, placesSearchCB); 
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(35.5390653, 129.3103105); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
 }
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
 function placesSearchCB(data, status) {
     if (status === kakao.maps.services.Status.OK) {
-        
+
         // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
         // LatLngBounds 객체에 좌표를 추가합니다
         var bounds = new kakao.maps.LatLngBounds();
