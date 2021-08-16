@@ -16,29 +16,11 @@ Findcafeteria는 노인분들과, 저소득자 분들이 더욱 자신이 거주
 * npm 설치를 권장합니다
 * 카카오맵 API 키가 있어야합니다.
 
-* npm 설치
+### 작동 방법
 ```bash
-npm install
+해당 웹앱을 돌리실 웹 환경에 해당 파일들을 넣으시면 끝입니다.
 ```
 
-* API 키 입력
-```
-REACT_APP_KAKAOMAP_API_KEY=카카오맵 API 키
-```
-
-* 빌드
-```bash
-npm run build
-```
-
-```bash
-npm install -g serve
-serve -s build
-```
-
-```bash
-npm run dev
-```
 
 ## 참가한 사람들
 | 참가한 사람 | 역할 |
