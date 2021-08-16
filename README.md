@@ -11,6 +11,35 @@ Findcafeteria는 노인분들과, 저소득자 분들이 더욱 자신이 거주
 * 또한 위치 퍼미션으로 자신이 어디에 있는지 알수 있고. 근처에 있는 무료 급식소들의 리스트를 한번에 알수 있습니다
 * 저희가 정한 해당 앱의 시그니쳐 컬러는 "초록(Find Green)"입니다. 더욱 밝고 친근하며, 편하다는 느낌을 주죠 :)
 
+## 빌드 방법
+
+* npm 설치를 권장합니다
+* 카카오맵 API 키가 있어야합니다.
+
+* npm 설치
+```bash
+npm install
+```
+
+* API 키 입력
+```
+REACT_APP_KAKAOMAP_API_KEY=카카오맵 API 키
+```
+
+* 빌드
+```bash
+npm run build
+```
+
+```bash
+npm install -g serve
+serve -s build
+```
+
+```bash
+npm run dev
+```
+
 ## 참가한 사람들
 | 참가한 사람 | 역할 |
 | ------- | --------- |
