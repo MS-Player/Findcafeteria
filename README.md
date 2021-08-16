@@ -24,6 +24,8 @@ Findcafeteria는 노인분들과, 저소득자 분들이 더욱 자신이 거주
 저희가 제공한 링크 외 다른 환경에서 구동을 원하시면 카카오맵 API KEY를 수정해주세요
 API 키는 index.html 104번째 줄에 있습니다
 ```
+![image](https://user-images.githubusercontent.com/32701658/129506468-c28ba7fb-0925-410b-a679-2ef71dec515e.png)
+
 
 ## 참가한 사람들
 | 참가한 사람 | 역할 |
