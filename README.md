@@ -42,4 +42,4 @@ API 키는 index.html 104번째 줄에 있습니다
 * hackalearn 2021
 * Microsoft Azure
 
-해당 웹앱은 hackalearn 2021 출품작입니다.
+해당 웹앱은 HackaLearn 2021 출품작입니다.
