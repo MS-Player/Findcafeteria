@@ -1,6 +1,7 @@
 @font-face {
     src : url("../font/GmarketSansTTF/GmarketSansTTFMedium.ttf"); 
-    font-family: GmarketSansTTF
+    font-family: GmarketSansTTF;
+    font-display: swap;
 }
 
 body {
