@@ -25,7 +25,7 @@ body {
     background-color: #fff;
 }
 .Bottombar button {
-    border:0px;
+    border: 0;
     background: none;
     padding: 0 -100px;
     cursor: pointer;
@@ -81,7 +81,7 @@ body {
 }
 
 .cafeteria_address {
-    margin: 8px 0 20px 0;
+    margin: 8px 0 20px;
     opacity: 0.77;
     font-family: GmarketSansTTF;
     font-size: 14px;
@@ -95,7 +95,7 @@ body {
 }
 
 .topic_txt {
-    margin: 20px 0 8px 0;
+    margin: 20px 0 8px;
     font-family: GmarketSansTTF;
     font-size: 15px;
     font-weight: bold;
@@ -108,7 +108,7 @@ body {
 }
 
 .target_person {
-    margin: 8px 0 20px 0;
+    margin: 8px 0 20px;
     font-family: GmarketSansTTF;
     font-size: 24px;
     font-weight: bold;
@@ -121,7 +121,7 @@ body {
 }
 
 .time {
-    margin: 6px 0 7px 0;
+    margin: 6px 0 7px;
     font-family: GmarketSansTTF;
     font-size: 26px;
     font-weight: bold;
@@ -134,7 +134,7 @@ body {
 }
 
 .day_of_the_week {
-    margin: 7px 0 3px 0;
+    margin: 7px 0 3px;
     opacity: 0.53;
     font-family: GmarketSansTTF;
     font-size: 14px;
@@ -154,7 +154,7 @@ body {
     padding: 14px;
     border-radius: 14px;
     background-color: #66cc54;
-    border: 0px solid;
+    border: 0;
     text-decoration-line: none;
 }
 .call:hover {

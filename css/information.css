@@ -128,7 +128,7 @@ a {
     background-color: #fff;
 }
 .Bottombar button {
-    border:0px;
+    border: 0;
     background: none;
     padding: 0 -100px;
     cursor: pointer;
