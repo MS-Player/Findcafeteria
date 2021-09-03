@@ -33,14 +33,14 @@ body {
 .Bottombar {
     width: 350px;
     bottom: 30px;
-    margin: 0 20px 0;
+    margin: 0 20px;
     padding: 20px;
     border-radius: 35px;
     box-shadow: 3px 3px 20px 0 rgba(157, 157, 157, 0.5);
     background-color: #fff;
 }
 .Bottombar button {
-    border: 0px;
+    border: 0;
     background: none;
     padding: 0 -100px;
     cursor: pointer;
@@ -137,7 +137,7 @@ body {
 
 .zoom_button {
     background-color: #ffffff;
-    border: 0px;
+    border: 0;
     cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ body {
 
 .cafeteria_list_box {
     width: 350px;
-    margin: 0 20px 0;
+    margin: 0 20px;
     padding: 23px 26px 23px 18px;
     bottom: 120px;
     border-radius: 22px;
@@ -156,7 +156,7 @@ body {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    border: 0px solid;
+    border: 0;
     background-color: #fff;
     text-align: right;
     text-decoration: none;
@@ -249,7 +249,7 @@ body {
     padding: 14px;
     border-radius: 14px;
     background-color: #66cc54;
-    border: 0px solid;
+    border: 0;
     text-decoration-line: none;
     text-decoration: none;
     float: right;

@@ -1,4 +1,6 @@
 # FindCafeteria! / 무료 급식소 찾기 웹앱
+[![CodeFactor](https://www.codefactor.io/repository/github/ms-player/findcafeteria/badge/main)](https://www.codefactor.io/repository/github/ms-player/findcafeteria/overview/main)
+
 Findcafeteria는 노인분들과, 저소득자 분들이 더욱 자신이 거주하는 지역에서 무료 급식소를 더욱 쉽게, 빠르게 찾을수 있게 개발된 정적 웹 어플리케이션입니다. 팀 내에서 아이디어를 정할때 노인분들과 저소득자를 위한 웹앱을 색다르고 제대로 개발해보면 어떨까? 라는 아이디어를 사용해서 팀원 4명끼리 제작한 정적 웹 어플리케이션 입니다 :)
 
 ## 소개
