@@ -124,7 +124,7 @@ body {
 .plus_icon {
     width: 24.5px;
     height: 24.5px;
-    margin: 0 6.9px 20.6px 6.9px;
+    margin: 0 6.9px 20.6px;
 }
 
 .zoom_bar {
@@ -164,7 +164,7 @@ body {
 }
 
 .cafeteria_name {
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     font-family: GmarketSansTTF;
     font-size: 28px;
     font-weight: bold;
@@ -177,7 +177,7 @@ body {
 }
 
 .cafeteria_address {
-    margin: 8px 0 20px 0;
+    margin: 8px 0 20px;
     opacity: 0.77;
     font-family: GmarketSansTTF;
     font-size: 14px;
@@ -191,7 +191,7 @@ body {
 }
 
 .topic_txt {
-    margin: 20px 0 8px 0;
+    margin: 20px 0 8px;
     font-family: GmarketSansTTF;
     font-size: 15px;
     font-weight: bold;
@@ -204,7 +204,7 @@ body {
 }
 
 .target_person {
-    margin: 8px 0 20px 0;
+    margin: 8px 0 20px;
     font-family: GmarketSansTTF;
     font-size: 24px;
     font-weight: bold;
@@ -217,7 +217,7 @@ body {
 }
 
 .time {
-    margin: 6px 0 7px 0;
+    margin: 6px 0 7px;
     font-family: GmarketSansTTF;
     font-size: 26px;
     font-weight: bold;
@@ -230,7 +230,7 @@ body {
 }
 
 .day_of_the_week {
-    margin: 7px 0 3px 0;
+    margin: 7px 0 3px;
     opacity: 0.53;
     font-family: GmarketSansTTF;
     font-size: 14px;
