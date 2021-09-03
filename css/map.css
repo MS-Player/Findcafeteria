@@ -40,7 +40,7 @@ body {
     background-color: #fff;
 }
 .Bottombar button {
-    border:0px;
+    border: 0px;
     background: none;
     padding: 0 -100px;
     cursor: pointer;
@@ -137,7 +137,7 @@ body {
 
 .zoom_button {
     background-color: #ffffff;
-    border:0px;
+    border: 0px;
     cursor: pointer;
 }
 
