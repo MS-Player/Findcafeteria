@@ -33,7 +33,7 @@ API 키는 index.html 104번째 줄에 있습니다
 | 참가한 사람 | 역할 |
 | ------- | --------- |
 | [@ajb3296](https://github/ajb3296) | 프론트엔드, 백엔드 개발 |\r\n
-| [@moakim5](https://github.com/moakim5) | 백엔드 개발 |\r\n
+| [@n47turbo](https://github.com/n47turbo) | 백엔드 개발 |\r\n
 | [@easycastle](https://github.com/easycastle) | 백엔드 개발 |\r\n
 | [@Swipe0801](https://github.com/Swipe0801) | UI/UX, 로고 디자인 |\r\n
 
