@@ -16,6 +16,17 @@
         <link rel="stylesheet" href="css/map.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
 
+        <style>
+            .hide_scroll::-webkit-scrollbar {
+              display: none;
+            }
+            
+            .hide_scroll {
+              -ms-overflow-style: none;  /* IE and 엣지 */
+              scrollbar-width: none;  /* 파이어폭스 */
+            }
+        </style>
+
     </head>
     <body>
         <p><input type="text" class="search" style="position: absolute; z-index: 2;" placeholder="&#xF002; 지역, 건물명, 도로명을 검색하세요." onkeypress="if( event.keyCode == 13 ){searchPlaces();}"/></p>
@@ -33,7 +44,7 @@
                     <span class="time">BackEnd: 이지성</span><br>
                     <span class="day_of_the_week">BackEnd: 김병국</span>
                 </a>
-                <a class="call" href='javascript:alert('준비중입니다.');'>
+                <a class="call" href='javascript:alert("준비중입니다.");'>
                     <div style="display: flex; align-items: center; justify-content: center;">
                         <i class="fa fa-phone" aria-hidden="true" style="color: #ffffff; font-size: 30px;"></i>
                     </div>
@@ -47,7 +58,7 @@
             <center style="flex: 1;"><button onClick="location.href='information.html'"><img src="icons/settings_grey.svg" alt="setting"></button></center>
         </div>
 
-        <div class="slide" style="position: absolute; z-index: 2;">
+        <div class="slide hide_scroll" style="position: absolute; z-index: 2;">
             <button onclick="Seoul()">서울</button>
             <button onclick="Ich()">인천</button>
             <button onclick="Gyung()">경기도</button>
@@ -64,11 +75,9 @@
             <button onclick="Man()">세종</button>
             <button onclick="Chns()">충청남도</button>
             <button onclick="Chnn()">충청북도</button>
-            <button onclick="Gang()">강원도</button>
             <button onclick="Jeju()">제주도</button>
         </div>
 
-       
         <button id="compass" class="compass" style="position: absolute; z-index: 2;" onclick="getCurrentPosBtn()">
             <center class="compassicon">
                 <img src="icons/compass_grey.svg" alt="compass"

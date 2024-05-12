@@ -12,30 +12,32 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 var ps = new kakao.maps.services.Places();
 
 // 내 위치 마커 START
-function locationLoadSuccess(pos){
+let my_location_marker = new kakao.maps.Marker();
+// 내 위치 마커 START
+function locationLoadSuccess(pos) {
     // 현재 위치 받아오기
     var currentPos = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
 
     // 지도 이동(기존 위치와 가깝다면 부드럽게 이동)
     map.panTo(currentPos);
 
-    var imageSrc = 'icons/mylocation.svg', // 마커이미지의 주소입니다
+    var imageSrc = './icons/mylocation.svg', // 마커이미지의 주소입니다
     imageSize = new kakao.maps.Size(128, 128), // 마커이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
     markerPosition = new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude); // 마커가 표시될 위치입니다
-    
+
+    // 이전에 있던 마커 제거
+    my_location_marker.setMap(null);
     // 마커 생성
-    var marker = new kakao.maps.Marker({
+    my_location_marker = new kakao.maps.Marker({
         position: markerPosition,
         image: markerImage // 마커이미지 설정 
     });
-
     // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(null);
-    marker.setMap(map);
+    my_location_marker.setMap(map);
 };
 
 function locationLoadError(pos){
@@ -310,14 +312,14 @@ for (let cafeteria of json_data) {
 // 마커 이미지의 이미지 주소입니다
 var imageSrc = "icons/pin_notenadbled.svg";
 var cafeteria_list_box = document.getElementById('cafeteria_list_box')
+
+// 마커 이미지의 이미지 크기 입니다
+var imageSize = new kakao.maps.Size(128, 128);
+
+// 마커 이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
 for (var i = 0; i < positions.length; i ++) {
-
-    // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(128, 128);
-
-    // 마커 이미지를 생성합니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
     // 마커를 생성합니다
     displayMarker(positions[i]);
 }
